@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
- 
   root 'welcome#index'
-  resources :articles
 
   namespace :admin do
+    root 'articles#index'
     resources :articles, :comments
+  end
+
+  resources :articles do
+    resources :comments
   end
 end

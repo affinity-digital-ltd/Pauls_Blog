@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+class Admin::ArticlesController < Admin::ApplicationController
 
   def new
     @article = Article.new
