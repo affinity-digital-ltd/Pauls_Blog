@@ -13,16 +13,16 @@
 ActiveRecord::Schema.define(version: 2018_08_14_130045) do
 
   create_table "articles", force: :cascade do |t|
-    t.string "title"
-    t.string "author"
-    t.text "text"
+    t.string "title", null: false
+    t.string "author", null: false
+    t.text "text", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string "author_name"
-    t.text "body"
+    t.string "author_name", null: false
+    t.text "body", null: false
     t.integer "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

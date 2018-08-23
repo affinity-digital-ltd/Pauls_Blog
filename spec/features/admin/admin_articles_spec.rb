@@ -21,30 +21,23 @@ RSpec.describe "Articles", type: :feature do
         visit admin_articles_path
         click_link('New Post')
 
-        # Fill in form
         fill_in("Title", :with => "A Title")
         fill_in("Author", :with => "Paul")
         fill_in("Text", :with => "Some text...")
-        # Submit form
-        click_on("Save Article")
+        
+        click_on("Create Article")
 
-        # Check article has been added
         expect(page).to have_content "A Title"
       end
     end
-
-    context "with invalid data" do
-      it "should not add the article"
-    end
   end
-
   describe "viewing an article" do
     # create article
     let!(:article) { create(:article) }
 
     it "should show the contents of the article" do
       http_login
-      visit admin_article_path(article)
+      visit article_path(article)
       
       expect(page).to have_content(article.title)
       expect(page).to have_content(article.text)
@@ -53,10 +46,47 @@ RSpec.describe "Articles", type: :feature do
   end
 
   describe "editing an article" do
-    it "should update the article"
+    let!(:article) { create(:article) }
+
+    it "should update the contents of an article" do
+      http_login
+      visit admin_articles_path
+
+      click_link('Edit')
+      fill_in("Author", :with => "New Author")
+      click_on "Update Article"
+
+      expect(page).to have_content("New Author")
+    end
+  end
+
+  describe "invalid data in article" do
+
+    it "should not create an article with invalid inputs" do
+      http_login
+      visit new_admin_article_path
+
+      click_on("Create Article")
+
+      expect(page).to have_content("Title can't be blank")
+      expect(page).to have_content("Author can't be blank")
+      expect(page).to have_content("Text can't be blank")
+    end
   end
 
   describe "deleting an article", js: true do
-    it "should delte the article"
+    let!(:article) { create(:article) }
+
+    it "should delete the article" do
+      http_login
+      visit admin_articles_path
+      click_on("Delete")
+
+      expect(message).to eq("Are you sure?")
+      click_on("OK")
+      expect(page).to redirect_to admin_articles_path
+      
+    end
   end
+  
 end

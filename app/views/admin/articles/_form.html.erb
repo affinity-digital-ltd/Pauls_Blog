@@ -1,4 +1,6 @@
-<%= form_for @article do |f| %>
+<%= form_for [:admin, @article] do |f| %>
+  <%= render partial: "shared/form_errors", object: @article %>
+  
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>

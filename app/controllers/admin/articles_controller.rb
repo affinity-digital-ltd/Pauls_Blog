@@ -9,7 +9,7 @@ class Admin::ArticlesController < Admin::ApplicationController
 
     if @article.save(article_params)
       flash[:notice] = "You successfully created a post."
-    redirect_to @article
+      redirect_to @article
     else
       flash[:notice] = "Error, please try again."
       render :new
@@ -19,8 +19,7 @@ class Admin::ArticlesController < Admin::ApplicationController
   def show
     @article = Article.find(params[:id])
     
-    @comment = Comment.new
-    @comment.article_id = @article.id
+    @article.comments.build
   end
 
   def index
@@ -33,10 +32,14 @@ class Admin::ArticlesController < Admin::ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    permitted_columns = params.require(:article).permit(:title, :text)
-    @article.update_attributes(permitted_columns)
-
-    redirect_to articles_path
+    
+    if @article.update(article_params)
+      flash[:notice] = "You successfully updated a post."
+      redirect_to admin_articles_path
+    else
+      flash[:notice] = "Error, please try again."
+      render :edit
+    end
   end
 
   def destroy
@@ -48,7 +51,7 @@ class Admin::ArticlesController < Admin::ApplicationController
 
   private 
   def article_params 
-      params.require(:article).permit(:title, :author, :text)
+    params.require(:article).permit(:title, :author, :text)
   end
 end
 

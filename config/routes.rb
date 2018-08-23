@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root 'articles#index'
 
   namespace :admin do
     root 'articles#index'
-    resources :articles, :comments
+    resources :articles, except: [:show]
   end
 
-  resources :articles do
+  resources :articles, only: [:index, :show] do
     resources :comments
   end
 end
