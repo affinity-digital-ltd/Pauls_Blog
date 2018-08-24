@@ -11,7 +11,7 @@ RSpec.describe "Articles", type: :feature do
     it "should show the articles" do
       visit admin_articles_path
       
-      expect(page).to have_css "h1", text: "List of all Articles"
+      expect(page).to have_css "h2", text: "List of all Articles"
     end
   end
 
@@ -21,9 +21,9 @@ RSpec.describe "Articles", type: :feature do
         visit admin_articles_path
         click_link('New Post')
 
-        fill_in("Title", :with => "A Title")
-        fill_in("Author", :with => "Paul")
-        fill_in("Text", :with => "Some text...")
+        fill_in("Title", with: "A Title")
+        fill_in("Author", with: "Paul")
+        fill_in("Text", with: "Some text...")
         
         click_on("Create Article")
 
@@ -31,6 +31,7 @@ RSpec.describe "Articles", type: :feature do
       end
     end
   end
+  
   describe "viewing an article" do
     # create article
     let!(:article) { create(:article) }
@@ -53,7 +54,7 @@ RSpec.describe "Articles", type: :feature do
       visit admin_articles_path
 
       click_link('Edit')
-      fill_in("Author", :with => "New Author")
+      fill_in("Author", with: "New Author")
       click_on "Update Article"
 
       expect(page).to have_content("New Author")
@@ -80,13 +81,11 @@ RSpec.describe "Articles", type: :feature do
     it "should delete the article" do
       http_login
       visit admin_articles_path
-      click_on("Delete")
 
-      expect(message).to eq("Are you sure?")
-      click_on("OK")
-      expect(page).to redirect_to admin_articles_path
-      
+      click_link("Delete")
+
+      page.driver.browser.switch_to.alert.accept 
+      expect(page).to_not have_content article.title 
     end
   end
-  
 end

@@ -4,12 +4,24 @@
     <title>PaulsBlog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag    'admin/application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'admin/application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <nav class="navbar navbar-light " style="background-color: #F26144;">
+        <div class="container-fluid">
+          <h1 class="admin__h1">Paul's Blog Admin Panel</h1>
+          <ul>
+            <li><a href="#">Articles</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

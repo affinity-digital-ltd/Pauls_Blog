@@ -7,7 +7,7 @@ module AuthHelper
       page.driver.browser.authorize(username, password)
     else
       # When javascript test
-      visit "http://#{username}:#{password}@#{host}:#{port}/"     
-     end
+      visit "http://#{username}:#{password}@#{ Capybara.current_session.server.host }:#{ Capybara.current_session.server.port }/admin"
+    end
   end
-end
+end    
