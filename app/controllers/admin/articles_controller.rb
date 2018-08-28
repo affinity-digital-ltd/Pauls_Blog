@@ -1,4 +1,5 @@
 class Admin::ArticlesController < Admin::ApplicationController
+  before_action :load_article, only: [:show, :edit, :update, :destroy]
 
   def new
     @article = Article.new
@@ -9,17 +10,11 @@ class Admin::ArticlesController < Admin::ApplicationController
 
     if @article.save(article_params)
       flash[:notice] = "You successfully created a post."
-      redirect_to @article
+      redirect_to admin_articles_path
     else
       flash[:notice] = "Error, please try again."
       render :new
     end
-  end
-
-  def show
-    @article = Article.find(params[:id])
-    
-    @article.comments.build
   end
 
   def index
@@ -27,11 +22,9 @@ class Admin::ArticlesController < Admin::ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
   end
 
   def update
-    @article = Article.find(params[:id])
     
     if @article.update(article_params)
       flash[:notice] = "You successfully updated a post."
@@ -43,10 +36,9 @@ class Admin::ArticlesController < Admin::ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
     @article.destroy
   
-    redirect_to articles_path, notice: "Post deleted."
+    redirect_to admin_articles_path, notice: "Post deleted."
   end
 
   private 
@@ -55,3 +47,7 @@ class Admin::ArticlesController < Admin::ApplicationController
   end
 end
 
+private
+  def load_article
+    @article = Article.find(params[:id])
+  end

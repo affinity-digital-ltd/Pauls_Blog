@@ -3,7 +3,6 @@ include AuthHelper
 
 RSpec.describe "Articles", type: :feature do
   before(:each) do
-    visit admin_articles_path
     http_login
   end
 
@@ -11,7 +10,7 @@ RSpec.describe "Articles", type: :feature do
     it "should show the articles" do
       visit admin_articles_path
       
-      expect(page).to have_css "h2", text: "List of all Articles"
+      expect(page).to have_css "h2", text: "Articles"
     end
   end
 
@@ -37,7 +36,6 @@ RSpec.describe "Articles", type: :feature do
     let!(:article) { create(:article) }
 
     it "should show the contents of the article" do
-      http_login
       visit article_path(article)
       
       expect(page).to have_content(article.title)
@@ -50,7 +48,6 @@ RSpec.describe "Articles", type: :feature do
     let!(:article) { create(:article) }
 
     it "should update the contents of an article" do
-      http_login
       visit admin_articles_path
 
       click_link('Edit')
@@ -64,7 +61,6 @@ RSpec.describe "Articles", type: :feature do
   describe "invalid data in article" do
 
     it "should not create an article with invalid inputs" do
-      http_login
       visit new_admin_article_path
 
       click_on("Create Article")
@@ -79,7 +75,6 @@ RSpec.describe "Articles", type: :feature do
     let!(:article) { create(:article) }
 
     it "should delete the article" do
-      http_login
       visit admin_articles_path
 
       click_link("Delete")
