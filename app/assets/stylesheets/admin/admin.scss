@@ -2,7 +2,7 @@
 
 /* Main styles */
 body {
-  background-color: #f2f2f2;
+  background-color: #f3f3f3;
 }
 
 h1, .admin__h2 {
@@ -45,40 +45,10 @@ li {
 
 /* Table */
 .table__links {
-  color: #fff;
+  color: #000;
 }
 
 .table__links:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-/* Form */
-.form__label {
-  font-weight: 700;
-  font-size: 1.6rem;
-}
-
-.form-control {
-  font-weight: 500;
-}
-
-/* Buttons */
-.new__post--link {
-  font-weight: 700;
-  font-size: 1.7rem;
-  display: block;
-  text-align: center;
-  background-color: #DC4A4A;
-  color: #fff;
-  min-width: 60%;
-  max-width: 70%;
-  margin: 25px auto;
-  padding: 2px 5px;
-  border-radius: 10px;
-}
-
-.new__post--link:hover {
   color: #000;
-  text-decoration: none;
+  text-decoration: underline;
 }

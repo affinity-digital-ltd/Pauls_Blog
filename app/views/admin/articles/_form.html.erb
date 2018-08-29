@@ -1,22 +1,22 @@
 <%= form_for [:admin, @article] do |f| %>
   <%= render partial: "shared/form_errors", object: @article %>
   
-  <p>
-    <%= f.label :title, class: "form__label"%><br>
+  <div class="form-group">
+    <%= f.label :title %><br>
     <%= f.text_field :title, required: :true, placeholder: :"Add your title here", class: "form-control" %>
-  </p>
+  </div>
 
-  <p>
-    <%= f.label :author, class: "form__label"%><br>
+  <div class="form-group">
+    <%= f.label :author %><br>
     <%= f.text_field :author, required: :true, placeholder: :"Add your name here", class: "form-control" %>
-  </p>
+  </div>
 
-  <p>
-    <%= f.label :text, class: "form__label"%><br>
+  <div class="form-group">
+    <%= f.label :text %><br>
     <%= f.text_area :text, required: :true, placeholder: :"Add your article here", class: "form-control", rows: 10%>
-  </p>
+  </div>
 
-  <p>
-    <%= f.submit class: "new__post--link"%>
-  </p>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-success btn-lg"%>
+  </div>
 <% end %>

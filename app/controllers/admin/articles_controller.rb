@@ -9,10 +9,9 @@ class Admin::ArticlesController < Admin::ApplicationController
     @article = Article.new(article_params)
 
     if @article.save(article_params)
-      flash[:notice] = "You successfully created a post."
-      redirect_to admin_articles_path
+      redirect_to admin_articles_path, notice: "You successfully created a post."
     else
-      flash[:notice] = "Error, please try again."
+      flash[:alert] = "All fields are required."
       render :new
     end
   end
@@ -27,10 +26,9 @@ class Admin::ArticlesController < Admin::ApplicationController
   def update
     
     if @article.update(article_params)
-      flash[:notice] = "You successfully updated a post."
-      redirect_to admin_articles_path
+      redirect_to admin_articles_path, notice: "You successfully updated your post."
     else
-      flash[:notice] = "Error, please try again."
+      flash[:alert] = "Please fill in all required fields."
       render :edit
     end
   end
@@ -38,7 +36,7 @@ class Admin::ArticlesController < Admin::ApplicationController
   def destroy
     @article.destroy
   
-    redirect_to admin_articles_path, notice: "Post deleted."
+    redirect_to admin_articles_path, notice: "Your post has been been deleted."
   end
 
   private 

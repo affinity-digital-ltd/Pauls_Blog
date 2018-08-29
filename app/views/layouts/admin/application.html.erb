@@ -6,7 +6,6 @@
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag    'admin/application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'admin/admin', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'admin/application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -17,7 +16,6 @@
         <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
@@ -31,6 +29,13 @@
       </nav>
     </header>
     <div class="container">
+      <% flash.each do |name, msg| -%>
+        <% if name == "alert" %>
+          <%= content_tag :div, msg, class: "alert alert-danger" %>
+        <% else %>
+          <%= content_tag :div, msg, class: "alert alert-success" %>
+        <% end %>
+      <% end -%>
       <%= yield %>
     </div>
   </body>

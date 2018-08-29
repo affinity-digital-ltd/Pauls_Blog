@@ -7,10 +7,14 @@ RSpec.describe "Articles", type: :feature do
   end
 
   describe "listing articles" do
-    it "should show the articles" do
+    let!(:articles) { create_list(:article, 3) }
+
+    it "should show all the articles" do
       visit admin_articles_path
       
-      expect(page).to have_css "h2", text: "Articles"
+      articles.each do |article|
+        expect(page).to have_content article.title
+      end
     end
   end
 
@@ -20,13 +24,13 @@ RSpec.describe "Articles", type: :feature do
         visit admin_articles_path
         click_link('New Post')
 
-        fill_in("Title", with: "A Title")
+        fill_in("Title", with: "Another Title")
         fill_in("Author", with: "Paul")
         fill_in("Text", with: "Some text...")
         
         click_on("Create Article")
 
-        expect(page).to have_content "A Title"
+        expect(page).to have_content "Another Title"
       end
     end
   end
