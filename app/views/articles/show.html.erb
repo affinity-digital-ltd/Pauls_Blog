@@ -1,5 +1,29 @@
-<h1>Show Page</h1>
 
+<div class="article__container">
+  <h1>Article Title</h1>
+  
+  <p>
+  But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful
+  </p>
+ 
+  <p>
+  But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful
+  </p>
+  
+   <p>
+  But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful
+  </p>
+
+  <p>
+<%= @article.text %>  
+</p>
+
+  <p class="author__text">Article by Paul Brighton</p>
+</div>
+
+
+<%
+=begin %>
 <p>
   <strong>Title:</strong>
   <%= @article.title %>
@@ -26,3 +50,6 @@
 <%= render partial: 'articles/comment', collection: @article.comments %>
 
 <%= link_to 'Back to Articles', articles_path %>
+
+<%
+=end %>

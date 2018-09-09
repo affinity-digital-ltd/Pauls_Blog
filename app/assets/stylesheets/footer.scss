@@ -1,0 +1,125 @@
+footer {
+  background-color: #252525;
+  width: 100%;
+  color: #f2f2f2;
+  display: grid;
+}
+
+.footer__container {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+/* Logo */
+footer .brand__logo {
+  color: #fff;
+  margin: 10px 0 0 5px;
+  font-family: 'Ubuntu';
+  line-height: 1.2;
+  text-align: center;
+  padding: 25px 0 5px 0;
+}
+
+.footer__nav--list {
+  text-align: center;
+  padding: 20px 0 5px 0;
+}
+
+.footer__nav--list li {
+  display: inline;
+  margin: 0 5px;
+  font-family: Nunito, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.footer__nav--list li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__nav--list li a:hover {
+  text-decoration: underline;
+  color: #939598;
+}
+
+footer h3 {
+  font-size: 1.4em;
+  text-align: center;
+  margin: 35px 0 5px;
+  font-weight: 300;
+}
+
+.social__images {
+  width: 100%;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.social__icon {
+  width: 25px;
+  height: auto;
+  margin: 0 15px;
+}
+
+.link__links {
+  text-align: center;
+}
+
+.link__item {
+  font-weight: 300;
+} 
+
+.link__links li {
+  font-size: 1.1em;
+  list-style-type: none;
+  font-weight: 300;
+}
+
+.link__links li a {
+  color: #939598;
+  text-decoration: none;
+}
+
+.link__links li a:hover {
+  color: #939598;
+  text-decoration: underline;
+}
+
+.footer__info {
+  text-align: center;
+  margin: 3px 0;
+  color: #939598;
+  font-weight: 300;
+}
+
+.copyright__info {
+  text-align: center;
+  color: #939598;
+  font-weight: 300;
+} 
+
+@media screen and (min-width: 773px) {
+  .footer__nav--list li {
+    font-size: 1.3em;
+    margin: 0 15px;
+  }
+
+  .social__links {
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+  }
+
+  .link__links {
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+  } 
+
+  .about__info {
+    width: 30%;
+    float: left;
+  }
+}

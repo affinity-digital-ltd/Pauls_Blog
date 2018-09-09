@@ -1,0 +1,143 @@
+header {
+  min-height: 450px;
+  width: 100%;
+  position: relative;
+  background: #000 image-url('header_hero.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content__wrap {
+  padding: 5px;
+}
+
+/* Logo */
+header .brand__logo {
+  color: #f2f2f2;
+  margin: 10px 0 0 5px;
+  float: left;
+  font-family: 'Ubuntu';
+  line-height: 1.2;
+  text-align: center;
+}
+
+.brand__logo h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.brand__logo p {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+/* Subscribe form */
+.email__form {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
+  
+  &-input {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+}
+
+.subscribe__input {
+  width: 200px;
+  padding: 0 5px;
+  border-radius: 5px 0 0 5px;
+  width: 200px;
+  height: 25px;
+  border: 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+.subscribe__btn {
+  background-color: #dadada;
+  font-family: "Roboto";
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0 5px 5px 0;
+  height: 2.27em;
+  padding: 6px 15px 5px 10px;
+  width: 75px;
+  background: #F4B62C;
+  color: white;
+  border: 0;
+  display: block;
+}
+
+/*Nav*/
+.header__nav {
+  float: right;
+  margin: 10px 5px 0 0;
+}
+
+.nav__hamburger {
+  font-size: 2.8em;
+  color: #f2f2f2;
+  float: right;
+  margin-right: 5px;
+}
+
+.nav__hamburger:hover {
+  cursor: pointer;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #f2f2f2;
+  display: block;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+.overlay a {font-size: 20px}
+.overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
