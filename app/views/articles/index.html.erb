@@ -1,167 +1,87 @@
-<!-- <h1>List of all Articles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Date-Created</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.author %></td>
-        <td><%= article.created_at.to_date %></td>
-        <td><%= link_to 'Show', article_path(article) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
 <div class="container">
-  <header>
-    <div class="content__wrap">
-    <%= link_to root_path do %>
-      <div class="brand__logo">
-        <h1>Paul Brighton</h1>
-        <p>Web Development</p>
-      </div>
-    <% end %>
-    <div class="email__form">
-      <%= form_with(url: "/search", method: "get", class: "email__form") do %>
-        <div class="email__form-input">
-          <%= text_field_tag :email, '', type: :email, placeholder: "Email", required: true, class: "subscribe__input" %>
-          <%= button_tag "Subscribe", type: "submit", class: "subscribe__btn" %>
-        </div>
-      <% end %>
-    </div>
-    <div data-behavior="myNav" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div class="overlay-content">
-        <li><%= link_to "home", '#' %></li>
-        <li><%= link_to "about", '#' %></li>
-        <li><%= link_to "portfolio", '#' %></li>
-        <li><%= link_to "contact", '#' %></li>
-    </div>
-  </div>
-  <span class="nav__hamburger" onclick="openNav()">&#9776;</span>
-</header>
-
+  <%= render 'shared/header' %>
   <main>
-    <div class="main-container">
-    <h2 class="main__headers">Welcome</h2>
-    <div class="header__divider"></div>
-      <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "welcome__img") %>
-      <p class="welcome__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and so blinded by desire, that they cannot foresee the pain.</p>
-      <h2 class="main__headers main__headers--clear">Featured Article</h2>
-      <div class="header__divider"></div>
-      <div class="articles__container--featured">
-        <div class="card card__featured">
-          <%= image_tag("html.jpg", alt: "An HTML illustration", class: "card__image") %>
+    <div class="section__welcome">
+      <div class="welcome__container">
+        <h2 class="main__headers">Welcome</h2>
+        <div class="header__divider"></div>
+        <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "welcome__img") %>
+        <p class="welcome__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and so blinded by desire, that they cannot foresee the pain.</p>
+      </div>
+    </div>
+    <div class="section__featured">
+      <div class="featured__container">
+        <h2 class="main__headers main__headers--clear">Featured Article</h2>
+        <div class="header__divider--featured"></div>
+        <div class="articles__container--featured">
+          <div class="card card__featured">
+            <%= image_tag("html.jpg", alt: "An HTML illustration", class: "card__image") %>
             <div class="card__text">
-                <h3>Modern CSS Tricks</h3>
+              <h3>Modern CSS Tricks</h3>
               <p>CSS is the coolest thing in web development.</p>
-                <p><%= link_to "Read Article" %></p>
+              <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
             </div>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="section__latest">
       <h2 class="main__headers">Latest Articles</h2>
       <div class="header__divider"></div>
       <div class="articles__container">
         <div class="card">
           <%= image_tag("mobile_first.jpg", alt: "A mobile phone in a hand", class: "card__image") %>
-            <div class="card__text">
-                <h3>Modern CSS Tricks</h3>
-                <p>CSS is the coolest thing in web development.</p>
-                <p class="article__link"><%= link_to "Read Article" %></p>
-            </div>
+          <div class="card__text">
+            <h3>Modern CSS Tricks</h3>
+            <p>CSS is the coolest thing in web development.</p>
+            <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
+          </div>
         </div>
         <div class="card">
           <%= image_tag("html-css.jpg", alt: "A book on html and a laptop", class: "card__image") %>
-            <div class="card__text">
-                <h3>Modern CSS Tricks</h3>
-                <p>CSS is the coolest thing in web development.</p>
-                <p class="article__link"><%= link_to "Read Article" %></p>
-            </div>
+          <div class="card__text">
+            <h3>Modern CSS Tricks</h3>
+            <p>CSS is the coolest thing in web development.</p>
+            <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
+          </div>
         </div>
         <div class="card">
-          <%= image_tag("conference.jpg", alt: "A mobile phone in a hand", class: "card__image") %>
-            <div class="card__text">
-                <h3>Modern CSS Tricks</h3>
-                <p>CSS is the coolest thing in web development.</p>
-                <p class="article__link"><%= link_to "Read Article" %></p>
-            </div>
+          <%= image_tag("html-css.jpg", alt: "A book on html and a laptop", class: "card__image") %>
+          <div class="card__text">
+            <h3>Modern CSS Tricks</h3>
+            <p>CSS is the coolest thing in web development.</p>
+            <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
+          </div>
         </div>
         <div class="card">
-          <%= image_tag("stickers.jpg", alt: "A mobile phone in a hand", class: "card__image") %>
-            <div class="card__text">
-                <h3>Modern CSS Tricks</h3>
-                <p>CSS is the coolest thing in web development.</p>
-                <p class="article__link"><%= link_to "Read Article" %></p>
-            </div>
+          <%= image_tag("html-css.jpg", alt: "A book on html and a laptop", class: "card__image") %>
+          <div class="card__text">
+            <h3>Modern CSS Tricks</h3>
+            <p>CSS is the coolest thing in web development.</p>
+            <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
+          </div>
         </div>
         <div class="card">
-          <%= image_tag("mac_user.jpg", alt: "A book on html and a laptop", class: "card__image") %>
-            <div class="card__text">
-                <h3>Modern CSS Tricks</h3>
-                <p>CSS is the coolest thing in web development.</p>
-                <p class="article__link"><%= link_to "Read Article" %></p>
-            </div>
+          <%= image_tag("html-css.jpg", alt: "A book on html and a laptop", class: "card__image") %>
+          <div class="card__text">
+            <h3>Modern CSS Tricks</h3>
+            <p>CSS is the coolest thing in web development.</p>
+            <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
+          </div>
         </div>
         <div class="card">
-          <%= image_tag("mobile.jpg", alt: "A mobile phone in a hand", class: "card__image") %>
-            <div class="card__text">
-                <h3>Modern CSS Tricks</h3>
-                <p>CSS is the coolest thing in web development.</p>
-                <p class="article__link"><%= link_to "Read Article" %></p>
-            </div>
+          <%= image_tag("html-css.jpg", alt: "A book on html and a laptop", class: "card__image") %>
+          <div class="card__text">
+            <h3>Modern CSS Tricks</h3>
+            <p>CSS is the coolest thing in web development.</p>
+            <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
+          </div>
         </div>
+        <p class="load__btn"><%= link_to "Load More..." %></p>
       </div>
-      <p class="load__btn"><%= link_to "Load More" %></p>
     </div>
   </main>
-
-  <footer>
-    <div class="footer__container">
-      <%# <div class="brand__logo">
-        <h1>Paul Brighton</h1>
-        <p>Web Development</p>
-      </div> %>
-      <nav class="footer__nav">
-        <ul class="footer__nav--list">
-          <li><%= link_to "home", '#' %></li>
-          <li><%= link_to "about", '#' %></li>
-          <li><%= link_to "portfolio", '#' %></li>
-          <li><%= link_to "contact", '#' %></li>
-        </ul>
-      </nav>
-      
-      <div class="social__links">
-        <h3>Social Media</h3>
-        <div class="social__images">
-          <%= link_to image_tag("twitter.svg", alt: "Twitter logo", class: "social__icon") %>
-          <%= link_to image_tag("facebook.svg", alt: "Facebook logo", class: "social__icon") %>
-          <%= link_to image_tag("pinterest.svg", alt: "Pinterest logo", class: "social__icon") %>
-          <%= link_to image_tag("linkedin.svg", alt: "LinkedIn logo", class: "social__icon") %>
-        </div>
-      </div>
-      <div class="link__links">
-        <h3>Useful Links</h3>
-        <li><%= link_to "ProCoders Bootcamp", 'https://procoders.co.uk/', class: "link__item"%></li>
-        <li><%= link_to "MDN Web Docs", 'https://developer.mozilla.org/en-US/', class: "link__item" %></li>
-        <li><%= link_to "Ruby on Rails Guides", 'https://guides.rubyonrails.org/', class: "link__item" %></li>
-        <li><%= link_to "CanIUse", 'https://caniuse.com/', class: "link__item" %></li>
-      </div>
-      <div class="about__info">
-        <h3>About</h3>
-        <p class="footer__info">Designed by Paul Brighton</p>
-        <p class="footer__info">Built with Ruby on Rails</p>
-        <p class="copyright__info">&copy; Copyright 2018 Paul Brighton</p>
-      </div>
-    </div>
-  </footer>
-
+  <%= render 'shared/footer' %>
 </div>
 
 

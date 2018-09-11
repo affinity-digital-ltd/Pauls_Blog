@@ -1,25 +1,29 @@
 
+ <%= render 'shared/header' %>
+
 <div class="article__container">
-  <h1>Article Title</h1>
-  
-  <p>
-  But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful
-  </p>
- 
-  <p>
-  But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful
-  </p>
-  
-   <p>
-  But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful
-  </p>
+  <h2 class="main__headers--article"><%= @article.title %></h2>
+  <div class="header__divider--article"></div>
 
-  <p>
-<%= @article.text %>  
-</p>
-
-  <p class="author__text">Article by Paul Brighton</p>
+  <h3 class="author__title">Article by <%= @article.author %></h3>
+  <p class="published__text">Published: <%= @article.created_at %></p>
+  <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "article__image") %>
+  <%# <%= @article.text %>
+  <div class="article__text">
+    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
+    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
+    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
+  </div>
+  <h4 class="catagory__title">Catagories:</h4>
+  <div class="catagory__buttons">
+    <%= button_tag "HTML", type: "button", class: "catagory__btn" %>
+    <%= button_tag "CSS", type: "button", class: "catagory__btn" %>
+    <%= button_tag "JavaScript", type: "button", class: "catagory__btn" %>
+    <%= button_tag "Ruby", type: "button", class: "catagory__btn" %>
+  </div>
 </div>
+
+ <%= render 'shared/footer' %>
 
 
 <%

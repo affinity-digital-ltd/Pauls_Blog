@@ -11,16 +11,6 @@ footer {
   padding-bottom: 20px;
 }
 
-/* Logo */
-footer .brand__logo {
-  color: #fff;
-  margin: 10px 0 0 5px;
-  font-family: 'Ubuntu';
-  line-height: 1.2;
-  text-align: center;
-  padding: 25px 0 5px 0;
-}
-
 .footer__nav--list {
   text-align: center;
   padding: 20px 0 5px 0;
@@ -40,7 +30,6 @@ footer .brand__logo {
 }
 
 .footer__nav--list li a:hover {
-  text-decoration: underline;
   color: #939598;
 }
 
@@ -83,7 +72,6 @@ footer h3 {
 }
 
 .link__links li a:hover {
-  color: #939598;
   text-decoration: underline;
 }
 
@@ -121,5 +109,12 @@ footer h3 {
   .about__info {
     width: 30%;
     float: left;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .footer__nav--list li {
+    margin: 0 25px;
+    font-size: 1.4em;
   }
 }

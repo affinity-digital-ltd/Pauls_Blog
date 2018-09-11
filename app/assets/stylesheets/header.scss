@@ -1,3 +1,6 @@
+/*-------------------------------------
+Header Styles
+-------------------------------------*/
 header {
   min-height: 450px;
   width: 100%;
@@ -12,7 +15,9 @@ header {
   padding: 5px;
 }
 
-/* Logo */
+/*-------------------------------------
+Logo Styling
+-------------------------------------*/
 header .brand__logo {
   color: #f2f2f2;
   margin: 10px 0 0 5px;
@@ -32,18 +37,20 @@ header .brand__logo {
   font-weight: 300;
 }
 
-/* Subscribe form */
+/*-------------------------------------
+Subscribe Form
+-------------------------------------*/
 .email__form {
   width: 100%;
   position: absolute;
   bottom: 0;
   padding-bottom: 10px;
+  display: block;
+  text-align: center;
   
   &-input {
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
+    justify-content: center;
   }
 }
 
@@ -65,15 +72,17 @@ header .brand__logo {
   text-transform: uppercase;
   border-radius: 0 5px 5px 0;
   height: 2.27em;
-  padding: 6px 15px 5px 10px;
-  width: 75px;
+  padding: 6px 15px 5px 15px;
+  width: 100px;
   background: #F4B62C;
   color: white;
   border: 0;
   display: block;
 }
 
-/*Nav*/
+/*-------------------------------------
+Hamburger Navigation
+-------------------------------------*/
 .header__nav {
   float: right;
   margin: 10px 5px 0 0;
@@ -133,11 +142,78 @@ header .brand__logo {
   font-size: 60px;
 }
 
-@media screen and (max-height: 450px) {
-.overlay a {font-size: 20px}
-.overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
+/*-------------------------------------
+Traditional Navigation 
+-------------------------------------*/
+.main__nav {
+  display: none;
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 420px;
+}
+
+.main__nav ul {
+  display: none;
+  text-align: center;
+}
+
+.main__nav li {
+display: inline-block;
+font-family: Nunito, sans-serif;
+font-weight: 300;
+text-transform: uppercase;
+font-size: 1.3em;
+margin: 0 15px;
+}
+
+.main__nav a {
+color: #f2f2f2;
+text-decoration: none;
+}
+
+.main__nav a:hover {
+  color: #939598;
+}
+
+/*-------------------------------------
+Media Queries
+-------------------------------------*/
+@media screen and (min-width: 768px) {
+  header .brand__logo {
+  margin: 10px 0 0 25px;
+  }
+
+  .nav__hamburger {
+  display: none;
+  }
+
+  .email__form {
+  width: 275px;
+  top: 0;
+  right: 0;
+  padding: 35px 35px 0 0;
+  }
+
+  .main__nav{
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 420px;
+  }
+
+  .main__nav ul {
+  display: block;
   }
 }
+
+@media screen and (min-width: 960px) {
+  .main__nav li {
+    margin: 0 25px;
+    font-size: 1.4em;
+  }
+
+  .main__nav {
+    width: 650px;
+  }
+}
+

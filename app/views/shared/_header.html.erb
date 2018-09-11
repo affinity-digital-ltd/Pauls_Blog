@@ -1,0 +1,37 @@
+ <header>
+    <div class="content__wrap">
+    <%= link_to root_path do %>
+      <div class="brand__logo">
+        <h1>Paul Brighton</h1>
+        <p>Web Development</p>
+      </div>
+    <% end %>
+    <div class="email__form">
+      <%= form_with(url: "/search", method: "get") do %>
+        <div class="email__form-input">
+          <%= text_field_tag :email, '', type: :email, placeholder: "Email", required: true, class: "subscribe__input" %>
+          <%= button_tag "Subscribe", type: "submit", class: "subscribe__btn" %>
+        </div>
+      <% end %>
+    </div>
+    <div data-behavior="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <li><%= link_to "home", '#' %></li>
+        <li><%= link_to "about", '#' %></li>
+        <li><%= link_to "portfolio", '#' %></li>
+        <li><%= link_to "contact", '#' %></li>
+    </div>
+  </div>
+  <span class="nav__hamburger" onclick="openNav()">&#9776;</span>
+  
+    <nav class="main__nav">
+      <ul>
+        <li><%= link_to "home", '#' %></li>
+        <li><%= link_to "about", '#' %></li>
+        <li><%= link_to "portfolio", '#' %></li>
+        <li><%= link_to "contact", '#' %></li>
+      </ul>
+    </nav>
+    
+</header>
