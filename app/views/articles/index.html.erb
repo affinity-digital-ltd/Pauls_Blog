@@ -1,86 +1,62 @@
 <div class="container">
   <%= render 'shared/header' %>
+
   <main>
-    <div class="section__welcome">
+    <section class="section__welcome">
       <div class="welcome__container">
         <h2 class="main__headers">Welcome</h2>
         <div class="header__divider"></div>
-        <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "welcome__img") %>
-        <p class="welcome__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and so blinded by desire, that they cannot foresee the pain.</p>
+        <figure>
+          <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "welcome__img") %>
+        </figure>
+        <p class="welcome__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.</p>
+        <p class="welcome__text">That they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
+        <p class="welcome__text">That they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
       </div>
-    </div>
-    <div class="section__featured">
+    </section>
+    <section class="section__featured">
       <div class="featured__container">
         <h2 class="main__headers main__headers--clear">Featured Article</h2>
         <div class="header__divider--featured"></div>
         <div class="articles__container--featured">
-          <div class="card card__featured">
-            <%= image_tag("html.jpg", alt: "An HTML illustration", class: "card__image") %>
-            <div class="card__text">
-              <h3>Modern CSS Tricks</h3>
-              <p>CSS is the coolest thing in web development.</p>
-              <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
+          <%= link_to article_path(Article.featured), class: "article--path" do %>
+            <div class="card__featured">
+              <figure>
+                <%= image_tag("html.jpg", alt: "An HTML illustration", class: "card__image") %>
+              </figure>
+              <div class="card__text--featured">
+                <h3><%= Article.featured.title %></h3>
+                <p><%= Article.featured.text.truncate_words(10) %></p>
+              </div>
             </div>
-          </div>
+          <% end %>
         </div>
       </div>
-    </div>
-    <div class="section__latest">
-      <h2 class="main__headers">Latest Articles</h2>
-      <div class="header__divider"></div>
-      <div class="articles__container">
-        <div class="card">
-          <%= image_tag("mobile_first.jpg", alt: "A mobile phone in a hand", class: "card__image") %>
-          <div class="card__text">
-            <h3>Modern CSS Tricks</h3>
-            <p>CSS is the coolest thing in web development.</p>
-            <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
-          </div>
-        </div>
-        <div class="card">
-          <%= image_tag("html-css.jpg", alt: "A book on html and a laptop", class: "card__image") %>
-          <div class="card__text">
-            <h3>Modern CSS Tricks</h3>
-            <p>CSS is the coolest thing in web development.</p>
-            <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
-          </div>
-        </div>
-        <div class="card">
-          <%= image_tag("html-css.jpg", alt: "A book on html and a laptop", class: "card__image") %>
-          <div class="card__text">
-            <h3>Modern CSS Tricks</h3>
-            <p>CSS is the coolest thing in web development.</p>
-            <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
-          </div>
-        </div>
-        <div class="card">
-          <%= image_tag("html-css.jpg", alt: "A book on html and a laptop", class: "card__image") %>
-          <div class="card__text">
-            <h3>Modern CSS Tricks</h3>
-            <p>CSS is the coolest thing in web development.</p>
-            <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
-          </div>
-        </div>
-        <div class="card">
-          <%= image_tag("html-css.jpg", alt: "A book on html and a laptop", class: "card__image") %>
-          <div class="card__text">
-            <h3>Modern CSS Tricks</h3>
-            <p>CSS is the coolest thing in web development.</p>
-            <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
-          </div>
-        </div>
-        <div class="card">
-          <%= image_tag("html-css.jpg", alt: "A book on html and a laptop", class: "card__image") %>
-          <div class="card__text">
-            <h3>Modern CSS Tricks</h3>
-            <p>CSS is the coolest thing in web development.</p>
-            <div class="article__link"><%= button_tag "Read Article", type: "button", class: "article__link--btn" %></div>
-          </div>
+    </section>
+    <section class="section__latest">
+      <div class="latest__container">
+        <h2 class="main__headers">Latest Articles</h2>
+        <div class="header__divider"></div>
+        <div class="articles__container">
+          <% @articles.each_with_index do |article, index| %>
+            <%= link_to article_path(article), class: "article--path" do %>
+            <div class="card">
+              <figure>
+                <%= image_tag("mac_user.jpg", alt: "A mobile phone in a hand", class: "card__image") %>
+              </figure>
+              <div class="card__text">
+                <h3><%= article.title %></h3>
+                <p><%= article.text.truncate_words(10) %></p>
+              </div>
+            </div>
+            <% end %>
+          <% end %>
         </div>
         <p class="load__btn"><%= link_to "Load More..." %></p>
       </div>
-    </div>
+    </section>
   </main>
+  
   <%= render 'shared/footer' %>
 </div>
 

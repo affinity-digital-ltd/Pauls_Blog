@@ -1,8 +1,8 @@
 <footer>
   <div class="footer__container">
-    <nav class="footer__nav">
-      <ul class="footer__nav--list">
-        <li><%= link_to "home", '#' %></li>
+    <nav>
+      <ul class="c-footer__nav--list">
+        <li><%= link_to "home", root_path %></li>
         <li><%= link_to "about", '#' %></li>
         <li><%= link_to "portfolio", '#' %></li>
         <li><%= link_to "contact", '#' %></li>
@@ -10,19 +10,19 @@
     </nav>
     <div class="social__links">
       <h3>Social Media</h3>
-      <div class="social__images">
-        <%= link_to image_tag("twitter.svg",  alt: "Twitter logo", class: "social__icon") %>
-        <%= link_to image_tag("facebook.svg", alt: "Facebook logo", class: "social__icon") %>
-        <%= link_to image_tag("pinterest.svg", alt: "Pinterest logo", class: "social__icon") %>
-        <%= link_to image_tag("linkedin.svg", alt: "LinkedIn logo", class: "social__icon") %>
+      <div class="social__brands">
+        <%= link_to image_tag("twitter.svg",  alt: "Twitter logo", class: "social__icon twitter__brand"), "https://twitter.com/paulbrighton_" %>
+        <%= link_to image_tag("facebook.svg", alt: "Facebook logo", class: "social__icon facebook__brand"), "https://www.facebook.com/paul.brighton.10" %>
+        <%= link_to image_tag("pinterest.svg", alt: "Pinterest logo", class: "social__icon pinterest__brand"), "https://www.pinterest.co.uk/paulbrightonfda/" %>
+        <%= link_to image_tag("linkedin.svg", alt: "LinkedIn logo", class: "social__icon linkedin__brand"), "https://www.linkedin.com/in/paulbrighton/" %>
       </div>
     </div>
-    <div class="link__links">
+    <div class="external__links">
       <h3>Useful Links</h3>
-      <li><%= link_to "ProCoders Bootcamp", 'https://procoders.co.uk/', class: "link__item"%></li>
-      <li><%= link_to "MDN Web Docs", 'https://developer.mozilla.org/en-US/', class: "link__item" %></li>
-      <li><%= link_to "Ruby on Rails Guides", 'https://guides.rubyonrails.org/', class: "link__item" %></li>
-      <li><%= link_to "CanIUse", 'https://caniuse.com/', class: "link__item" %></li>
+      <li><%= link_to "ProCoders Bootcamp", 'https://procoders.co.uk/' %></li>
+      <li><%= link_to "MDN Web Docs", 'https://developer.mozilla.org/en-US/' %></li>
+      <li><%= link_to "Ruby on Rails Guides", 'https://guides.rubyonrails.org/' %></li>
+      <li><%= link_to "CanIUse", 'https://caniuse.com/' %></li>
     </div>
     <div class="about__info">
       <h3>About</h3>

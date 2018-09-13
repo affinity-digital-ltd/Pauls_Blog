@@ -7,23 +7,15 @@ Main Styles
   margin: 0 auto 35px;
 }
 
-.main__headers--article {
+.article__header {
   font-size: 2em;
   margin: 20px 0 0;
-}
 
-.header__divider--article {
-  height: 1px;
-  background-color: #252525;
-  margin: 0 auto 10px;
-}
-
-.article__text p {
-  font-size: 1.1em;
-  font-weight: 300;
-}
-.article__container p {
-  margin-bottom: 25px;
+  &--divider {
+    height: 1px;
+    background-color: #252525;
+    margin: 0 auto 10px;
+  }
 }
 
 .author__title {
@@ -33,6 +25,13 @@ Main Styles
 .published__text {
   font-size: 1.1em;
   font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.article__text p {
+  font-size: 1.1em;
+  font-weight: 300;
+  margin-bottom: 25px;
 }
 
 .catagory__title {
@@ -46,22 +45,28 @@ Image Styles
 .article__image {
   width: 100%;
   height: auto;
-  margin: 15px auto 35px;
+  margin: 45px auto 35px;
   border-radius: 5px;
 }
 
 /*-------------------------------------
 Button Styles
 -------------------------------------*/
-.catagory__btn {
+.c-catagory__btn {
   height: 25px;
   padding: 0 15px;
-  background-color: #ababab;
-  color: #252525;
+  background-color: rgb(212, 66, 55);
+  color: #f2f2f2;
+  border: 0.5px solid #252525;
   border-radius: 5px;
   font-weight: 600;
   margin: 10px 20px 0 0;
   outline: none;
+
+  &:hover {
+    background-color: rgb(199, 61, 52);
+    cursor: pointer;
+  }
 }
 
 /*-------------------------------------

@@ -1,6 +1,3 @@
-/*-------------------------------------
-Header Styles
--------------------------------------*/
 header {
   min-height: 450px;
   width: 100%;
@@ -11,42 +8,43 @@ header {
   background-size: cover;
 }
 
-.content__wrap {
+.header__container {
   padding: 5px;
 }
 
 /*-------------------------------------
 Logo Styling
 -------------------------------------*/
-header .brand__logo {
+.brand__logo {
   color: #f2f2f2;
   margin: 10px 0 0 5px;
   float: left;
   font-family: 'Ubuntu';
   line-height: 1.2;
   text-align: center;
-}
 
-.brand__logo h1 {
-  font-size: 2rem;
-  font-weight: 600;
-}
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
 
-.brand__logo p {
-  font-size: 1.3rem;
-  font-weight: 300;
+  p {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
 }
 
 /*-------------------------------------
 Subscribe Form
 -------------------------------------*/
 .email__form {
-  width: 100%;
+  width: 90%;
   position: absolute;
   bottom: 0;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   display: block;
-  text-align: center;
+  margin: 0 5% 0 5%;
+  left: 0;
   
   &-input {
     display: flex;
@@ -85,7 +83,7 @@ Hamburger Navigation
 -------------------------------------*/
 .header__nav {
   float: right;
-  margin: 10px 5px 0 0;
+  margin: 5px 5px 0 0;
 }
 
 .nav__hamburger {
@@ -93,10 +91,10 @@ Hamburger Navigation
   color: #f2f2f2;
   float: right;
   margin-right: 5px;
-}
 
-.nav__hamburger:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .overlay {
@@ -110,69 +108,69 @@ Hamburger Navigation
   background-color: rgba(0,0,0, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
-}
 
-.overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
+  &-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
 
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #f2f2f2;
-  display: block;
-  transition: 0.3s;
-  text-transform: uppercase;
-  font-weight: 300;
-}
+  a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
 
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-}
+  a:hover, a:focus {
+    color: #fff;
+  }
 
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+  .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
 }
 
 /*-------------------------------------
 Traditional Navigation 
 -------------------------------------*/
-.main__nav {
+.c-main__nav {
   display: none;
   width: 500px;
   margin: 0 auto;
   padding-top: 420px;
-}
 
-.main__nav ul {
-  display: none;
-  text-align: center;
-}
+  ul {
+    display: none;
+    text-align: center;
+  }
 
-.main__nav li {
-display: inline-block;
-font-family: Nunito, sans-serif;
-font-weight: 300;
-text-transform: uppercase;
-font-size: 1.3em;
-margin: 0 15px;
-}
+  li {
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    margin: 0 15px;
+  }
 
-.main__nav a {
-color: #f2f2f2;
-text-decoration: none;
-}
+  a {
+    color: #f2f2f2;
+    text-decoration: none;
+  }
 
-.main__nav a:hover {
-  color: #939598;
+  a:hover {
+    color: #939598;
+  }
 }
 
 /*-------------------------------------
@@ -180,40 +178,41 @@ Media Queries
 -------------------------------------*/
 @media screen and (min-width: 768px) {
   header .brand__logo {
-  margin: 10px 0 0 25px;
+    margin: 10px 0 0 25px;
   }
 
   .nav__hamburger {
-  display: none;
+    display: none;
   }
 
   .email__form {
-  width: 275px;
-  top: 0;
-  right: 0;
-  padding: 35px 35px 0 0;
+    width: 275px;
+    top: 0;
+    left: auto;
+    right: 0;
+    padding: 35px 35px 0 0;
   }
 
-  .main__nav{
-  display: block;
-  width: 500px;
-  margin: 0 auto;
-  padding-top: 420px;
-  }
+  .c-main__nav {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 420px;
 
-  .main__nav ul {
-  display: block;
-  }
+    ul {
+      display: block;
+    }
+  } 
 }
 
 @media screen and (min-width: 960px) {
-  .main__nav li {
-    margin: 0 25px;
-    font-size: 1.4em;
-  }
-
-  .main__nav {
+  .c-main__nav {
     width: 650px;
+
+    li {
+      margin: 0 25px;
+      font-size: 1.4em;
+    }
   }
 }
 

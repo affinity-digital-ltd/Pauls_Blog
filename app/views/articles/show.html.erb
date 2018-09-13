@@ -1,59 +1,27 @@
 
  <%= render 'shared/header' %>
 
-<div class="article__container">
-  <h2 class="main__headers--article"><%= @article.title %></h2>
-  <div class="header__divider--article"></div>
+<article class="article__container">
+  <h2 class="article__header"><%= @article.title %></h2>
+  <div class="article__header--divider"></div>
 
   <h3 class="author__title">Article by <%= @article.author %></h3>
-  <p class="published__text">Published: <%= @article.created_at %></p>
-  <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "article__image") %>
-  <%# <%= @article.text %>
+  <time class="published__text">Published: <%= @article.created_at.strftime("%d-%m-%Y") %></time>
+  <figure>
+    <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "article__image") %>
+  </figure>
   <div class="article__text">
-    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
-    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
-    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
+    <p><%= @article.text %></p>
   </div>
   <h4 class="catagory__title">Catagories:</h4>
   <div class="catagory__buttons">
-    <%= button_tag "HTML", type: "button", class: "catagory__btn" %>
-    <%= button_tag "CSS", type: "button", class: "catagory__btn" %>
-    <%= button_tag "JavaScript", type: "button", class: "catagory__btn" %>
-    <%= button_tag "Ruby", type: "button", class: "catagory__btn" %>
+    <%= button_tag "HTML", type: "button", class: "c-catagory__btn" %>
+    <%= button_tag "CSS", type: "button", class: "c-catagory__btn" %>
+    <%= button_tag "JavaScript", type: "button", class: "c-catagory__btn" %>
+    <%= button_tag "Ruby", type: "button", class: "c-catagory__btn" %>
   </div>
-</div>
+</article>
 
  <%= render 'shared/footer' %>
 
 
-<%
-=begin %>
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @article.author %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
-
-<p>
-  <strong>Time:</strong>
-  <%= @article.created_at %>
-</p>
-
-<%= render partial: 'comments/form' %>
-
-<h3>Comments</h3>
-<%= render partial: 'articles/comment', collection: @article.comments %>
-
-<%= link_to 'Back to Articles', articles_path %>
-
-<%
-=end %>
