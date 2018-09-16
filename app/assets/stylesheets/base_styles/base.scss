@@ -1,0 +1,27 @@
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
+  color: #252525;
+  background-color: #f6f6f7;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.c-main__headers {
+  font-weight: 300;
+  font-size: 2em;
+  margin: 20px 5% 0;
+
+}
+
+.c-header__divider {
+  width: 90%;
+  height: 1px;
+  background-color: #252525;
+  margin: 5px auto 20px;
+}

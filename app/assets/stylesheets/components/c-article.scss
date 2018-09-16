@@ -1,13 +1,13 @@
 /*-------------------------------------
 Main Styles 
 -------------------------------------*/
-.article__container {
+.c-article__container {
   min-width: 300px;
   padding: 0 5%;
   margin: 0 auto 35px;
 }
 
-.article__header {
+.c-article__header {
   font-size: 2em;
   margin: 20px 0 0;
 
@@ -18,23 +18,23 @@ Main Styles
   }
 }
 
-.author__title {
+.c-author__title {
   font-size: 1.2em;
 }
 
-.published__text {
+.c-published__text {
   font-size: 1.1em;
   font-weight: 300;
   margin-bottom: 25px;
 }
 
-.article__text p {
+.c-article__text p {
   font-size: 1.1em;
   font-weight: 300;
   margin-bottom: 25px;
 }
 
-.catagory__title {
+.c-catagory__title {
   font-size: 1.1em;
   margin-top: 20px;
 }
@@ -42,7 +42,7 @@ Main Styles
 /*-------------------------------------
 Image Styles
 -------------------------------------*/
-.article__image {
+.c-article__image {
   width: 100%;
   height: auto;
   margin: 45px auto 35px;
@@ -59,7 +59,7 @@ Button Styles
   color: #f2f2f2;
   border: 0.5px solid #252525;
   border-radius: 5px;
-  font-weight: 600;
+  font-weight: 500;
   margin: 10px 20px 0 0;
   outline: none;
 
@@ -73,19 +73,19 @@ Button Styles
 Media Queries
 -------------------------------------*/
 @media only screen and (min-width: 500px) {
-  .article__container {
+  .c-article__container {
     width: 480px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .article__container {
+  .c-article__container {
     width: 668px;
   }
 }
 
 @media only screen and (min-width: 1020px) {
-  .article__container {
+  .c-article__container {
     width: 750px;
     padding: 0 30px;
   }

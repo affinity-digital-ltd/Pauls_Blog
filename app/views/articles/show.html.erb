@@ -1,19 +1,19 @@
 
  <%= render 'shared/header' %>
 
-<article class="article__container">
-  <h2 class="article__header"><%= @article.title %></h2>
-  <div class="article__header--divider"></div>
+<article class="c-article__container">
+  <h2 class="c-article__header"><%= @article.title %></h2>
+  <div class="c-article__header--divider"></div>
 
-  <h3 class="author__title">Article by <%= @article.author %></h3>
-  <time class="published__text">Published: <%= @article.created_at.strftime("%d-%m-%Y") %></time>
+  <h3 class="c-author__title">Article by <%= @article.author %></h3>
+  <time class="c-published__text">Published: <%= @article.created_at.strftime("%d-%m-%Y") %></time>
   <figure>
-    <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "article__image") %>
+    <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "c-article__image") %>
   </figure>
-  <div class="article__text">
+  <div class="c-article__text">
     <p><%= @article.text %></p>
   </div>
-  <h4 class="catagory__title">Catagories:</h4>
+  <h4 class="c-catagory__title">Catagories:</h4>
   <div class="catagory__buttons">
     <%= button_tag "HTML", type: "button", class: "c-catagory__btn" %>
     <%= button_tag "CSS", type: "button", class: "c-catagory__btn" %>

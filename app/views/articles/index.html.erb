@@ -2,29 +2,29 @@
   <%= render 'shared/header' %>
 
   <main>
-    <section class="section__welcome">
-      <div class="welcome__container">
-        <h2 class="main__headers">Welcome</h2>
-        <div class="header__divider"></div>
+    <section class="c-section__welcome">
+      <div class="c-welcome__container">
+        <h1 class="c-main__headers">Paul Brighton Web Development</h1>
+        <div class="c-header__divider"></div>
         <figure>
-          <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "welcome__img") %>
+          <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "c-welcome__img") %>
         </figure>
-        <p class="welcome__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.</p>
-        <p class="welcome__text">That they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
-        <p class="welcome__text">That they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
+        <p class="c-welcome__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.</p>
+        <p class="c-welcome__text">That they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
+        <p class="c-welcome__text">That they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
       </div>
     </section>
-    <section class="section__featured">
-      <div class="featured__container">
-        <h2 class="main__headers main__headers--clear">Featured Article</h2>
-        <div class="header__divider--featured"></div>
-        <div class="articles__container--featured">
-          <%= link_to article_path(Article.featured), class: "article--path" do %>
-            <div class="card__featured">
+    <section class="c-section__featured">
+      <div class="c-featured__container">
+        <h2 class="c-main__headers c-main__headers--clear">Featured Article</h2>
+        <div class="c-header__divider--featured"></div>
+        <div class="c-articles__container--featured">
+          <%= link_to article_path(Article.featured), class: "c-article--path" do %>
+            <div class="c-card__featured">
               <figure>
-                <%= image_tag("html.jpg", alt: "An HTML illustration", class: "card__image") %>
+                <%= image_tag("html.jpg", alt: "An HTML illustration", class: "c-card__image") %>
               </figure>
-              <div class="card__text--featured">
+              <div class="c-card__text--featured">
                 <h3><%= Article.featured.title %></h3>
                 <p><%= Article.featured.text.truncate_words(10) %></p>
               </div>
@@ -33,18 +33,18 @@
         </div>
       </div>
     </section>
-    <section class="section__latest">
-      <div class="latest__container">
-        <h2 class="main__headers">Latest Articles</h2>
-        <div class="header__divider"></div>
-        <div class="articles__container">
+    <section class="c-section__latest">
+      <div class="c-latest__container">
+        <h2 class="c-main__headers">Latest Articles</h2>
+        <div class="c-header__divider"></div>
+        <div class="c-articles__container">
           <% @articles.each_with_index do |article, index| %>
-            <%= link_to article_path(article), class: "article--path" do %>
-            <div class="card">
+            <%= link_to article_path(article), class: "c-article--path" do %>
+            <div class="c-card">
               <figure>
-                <%= image_tag("mac_user.jpg", alt: "A mobile phone in a hand", class: "card__image") %>
+                <%= image_tag("mac_user.jpg", alt: "A mobile phone in a hand", class: "c-card__image") %>
               </figure>
-              <div class="card__text">
+              <div class="c-card__text">
                 <h3><%= article.title %></h3>
                 <p><%= article.text.truncate_words(10) %></p>
               </div>
@@ -52,7 +52,7 @@
             <% end %>
           <% end %>
         </div>
-        <p class="load__btn"><%= link_to "Load More..." %></p>
+        <p class="c-load__btn"><%= link_to "Load More..." %></p>
       </div>
     </section>
   </main>

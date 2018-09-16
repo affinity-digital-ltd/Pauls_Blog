@@ -6,7 +6,7 @@ main {
   background-color: #f6f6f7;
 }
 
-.articles__container {
+.c-articles__container {
   max-width: 90%;
   display: grid;
   grid-template-columns: 1fr;
@@ -17,17 +17,17 @@ main {
 /*-------------------------------------
 Welcome Section 
 -------------------------------------*/
-.section__welcome {
+.c-section__welcome {
   width: 100%;
 }
 
-.welcome__container {
+.c-welcome__container {
   max-width: 1120px;
   margin: 0 auto;
   padding-bottom: 20px;
 }
 
-.welcome__text {
+.c-welcome__text {
   max-width: 100%;
   margin: 0 5%;
   padding-top: 25px;
@@ -36,7 +36,7 @@ Welcome Section
   font-size: 1.1em;
 }
 
-.welcome__img {
+.c-welcome__img {
   max-width: 90%;
   margin: 0 5%;
   padding-top: 25px;
@@ -45,14 +45,14 @@ Welcome Section
 /*-------------------------------------
 Featured Section 
 -------------------------------------*/
-.section__featured {
+.c-section__featured {
   max-width: 100%;
   background-color: #252525;
   color: #f2f2f2;
   clear: both;
 }
 
-.featured__container {
+.c-featured__container {
   max-width: 1120px;
   padding-bottom: 25px;
   margin: 0 auto;
@@ -63,14 +63,14 @@ Featured Section
   }
 }
 
-.header__divider--featured {
+.c-header__divider--featured {
   background-color: #f2f2f2;
   width: 90%;
   height: 1px;
-  margin: 0 auto 20px;
+  margin: 5px auto 20px;
 }
 
-.articles__container--featured {
+.c-articles__container--featured {
   width: 90%;
   display: grid;
   grid-template-columns: 1fr;
@@ -95,7 +95,7 @@ Featured Section
   }
 }
 
-.card__featured {
+.c-card__featured {
   margin: 25px auto 25px;
   border-radius: 15px;
   width: 100%;
@@ -106,7 +106,7 @@ Featured Section
   }
 }
 
-.card__text--featured {
+.c-card__text--featured {
   border: 0.5px solid #c5c5c5;
   padding: 0 15px 10px 15px;
   border-radius: 10px;
@@ -121,12 +121,12 @@ Featured Section
 /*-------------------------------------
 Latest Section 
 -------------------------------------*/
-.latest__container {
+.c-latest__container {
   max-width: 1120px;
   margin: 0 auto;
 }
 
-.load__btn {
+.c-load__btn {
   width: 100%;
   text-align: center;
   font-weight: 500;
@@ -146,7 +146,7 @@ Latest Section
 /*-------------------------------------
 Article Preview Card
 -------------------------------------*/
-.card {
+.c-card {
   margin: 25px auto 25px;
   border-radius: 15px;
   width: 100%;
@@ -176,7 +176,7 @@ Article Preview Card
   }
 }
 
-.articles__container h3 {
+.c-articles__container h3 {
   color: #252525;
   text-align: center;
   font-size: 1.5em;
@@ -184,7 +184,7 @@ Article Preview Card
   padding-top: 5px;
 }
 
-.articles__container p {
+.c-articles__container p {
   color: #252525;
   font-size: 1.1em;
   margin: 15px 0;
@@ -201,23 +201,23 @@ Media Query - Tablet
 -------------------------------------*/
 
 @media screen and (min-width: 768px) {
-  .articles__container {
+  .c-articles__container {
     grid-template-columns: 1fr 1fr;
   }
 
-  .welcome__text {
+  .c-welcome__text {
     width: 90%;
     margin: 0 5%;
   }
   
-  .welcome__img {
+  .c-welcome__img {
     width: 40%;
     margin: 0 5%;
     float: right;
     padding-bottom: 15px;
   }
 
-  .main__headers--clear {
+  .c-main__headers--clear {
     clear: both;
   }
 }
@@ -226,24 +226,24 @@ Media Query - Tablet
 Media Queries - Desktop
 -------------------------------------*/
 @media screen and (min-width: 960px) {
-  .articles__container {
+  .c-articles__container {
     padding-bottom: 20px;
   }
 
-  .welcome__img {
+  .c-welcome__img {
     padding-bottom: 35px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .articles__container {
+  .c-articles__container {
     grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: 15px;
   }
 }
 
 @media screen and (min-width: 1112px) {
-  .welcome__img {
+  .c-welcome__img {
     padding-bottom: 50px;
   }
 }

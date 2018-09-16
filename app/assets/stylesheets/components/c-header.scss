@@ -1,4 +1,4 @@
-header {
+.c-header {
   min-height: 450px;
   width: 100%;
   position: relative;
@@ -8,36 +8,28 @@ header {
   background-size: cover;
 }
 
-.header__container {
+.c-header__container {
   padding: 5px;
 }
 
 /*-------------------------------------
 Logo Styling
 -------------------------------------*/
-.brand__logo {
+.c-brand__logo {
   color: #f2f2f2;
   margin: 10px 0 0 5px;
   float: left;
   font-family: 'Ubuntu';
   line-height: 1.2;
   text-align: center;
-
-  h1 {
-    font-size: 2rem;
-    font-weight: 600;
-  }
-
-  p {
-    font-size: 1.3rem;
-    font-weight: 300;
-  }
+  width: 200px;
+  height: auto;
 }
 
 /*-------------------------------------
 Subscribe Form
 -------------------------------------*/
-.email__form {
+.c-email__form {
   width: 90%;
   position: absolute;
   bottom: 0;
@@ -52,7 +44,7 @@ Subscribe Form
   }
 }
 
-.subscribe__input {
+.c-subscribe__input {
   width: 200px;
   padding: 0 5px;
   border-radius: 5px 0 0 5px;
@@ -63,10 +55,10 @@ Subscribe Form
   display: block;
 }
 
-.subscribe__btn {
+.c-subscribe__btn {
   background-color: #dadada;
   font-family: "Roboto";
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   border-radius: 0 5px 5px 0;
   height: 2.27em;
@@ -81,12 +73,12 @@ Subscribe Form
 /*-------------------------------------
 Hamburger Navigation
 -------------------------------------*/
-.header__nav {
+.c-header__nav {
   float: right;
   margin: 5px 5px 0 0;
 }
 
-.nav__hamburger {
+.c-nav__hamburger {
   font-size: 2.8em;
   color: #f2f2f2;
   float: right;
@@ -97,7 +89,7 @@ Hamburger Navigation
   }
 }
 
-.overlay {
+.c-overlay {
   height: 100%;
   width: 0;
   position: fixed;
@@ -132,7 +124,7 @@ Hamburger Navigation
     color: #fff;
   }
 
-  .closebtn {
+  .c-closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
@@ -177,15 +169,15 @@ Traditional Navigation
 Media Queries
 -------------------------------------*/
 @media screen and (min-width: 768px) {
-  header .brand__logo {
+  header .c-brand__logo {
     margin: 10px 0 0 25px;
   }
 
-  .nav__hamburger {
+  .c-nav__hamburger {
     display: none;
   }
 
-  .email__form {
+  .c-email__form {
     width: 275px;
     top: 0;
     left: auto;

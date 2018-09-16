@@ -1,28 +1,27 @@
- <header>
-  <div class="header__container">
+ <header class="c-header">
+  <div class="c-header__container">
     <%= link_to root_path do %>
-      <div class="brand__logo">
-        <h1>Paul Brighton</h1>
-        <p>Web Development</p>
+      <figure>
+        <%= image_tag("logo.png", alt: "Paul Brighton Web Development Logo", class: "c-brand__logo") %>
+      </figure>
+    <% end %>
+    <%= form_with(url: "/search", method: "get", class: "c-email__form") do %>
+      <div class="c-email__form-input">
+        <%= text_field_tag :email, '', type: :email, placeholder: "Email", required: true, class: "c-subscribe__input" %>
+        <%= button_tag "Subscribe", type: "submit", class: "c-subscribe__btn" %>
       </div>
     <% end %>
-    <%= form_with(url: "/search", method: "get", class: "email__form") do %>
-      <div class="email__form-input">
-        <%= text_field_tag :email, '', type: :email, placeholder: "Email", required: true, class: "subscribe__input" %>
-        <%= button_tag "Subscribe", type: "submit", class: "subscribe__btn" %>
-      </div>
-    <% end %>
-    <nav class="header__nav">
-      <div data-behavior="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
+    <nav class="c-header__nav">
+      <div data-behavior="myNav" class="c-overlay">
+        <a href="javascript:void(0)" class="c-closebtn" onclick="closeNav()">&times;</a>
+        <div class="c-overlay-content">
           <li><%= link_to "home", root_path %></li>
           <li><%= link_to "about", '#' %></li>
           <li><%= link_to "portfolio", '#' %></li>
           <li><%= link_to "contact", '#' %></li>
         </div>
       </div>
-      <span class="nav__hamburger" onclick="openNav()">&#9776;</span>
+      <span class="c-nav__hamburger" onclick="openNav()">&#9776;</span>
     </nav>
     <nav class="c-main__nav">
       <ul>

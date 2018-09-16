@@ -1,35 +1,9 @@
-@import "reset";
-@import "header";
-@import "fonts";
-@import "main";
-@import "footer";
-@import "show";
+@import "base_styles/reset";
+@import "components/c-header";
+@import "base_styles/fonts";
+@import "components/c-main";
+@import "components/c-footer";
+@import "components/c-article";
+@import "base_styles/base";
 
-body {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.5;
-  box-sizing: border-box;
-  color: #252525;
-  background-color: #f6f6f7;
-  font-size: 16px;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.main__headers {
-  font-weight: 400;
-  font-size: 2em;
-  margin: 20px 5% 0;
-
-}
-
-.header__divider {
-  width: 90%;
-  height: 1px;
-  background-color: #252525;
-  margin: 0 auto 20px;
-}
 

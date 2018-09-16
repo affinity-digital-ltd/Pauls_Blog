@@ -1,4 +1,4 @@
-footer {
+.c-footer {
   background-color: #252525;
   width: 100%;
   color: #f2f2f2;
@@ -12,7 +12,7 @@ footer {
   }
 }
 
-.footer__container {
+.c-footer__container {
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
@@ -47,29 +47,29 @@ Footer Navigation
 /*-------------------------------------
 Social Media
 -------------------------------------*/
-.social__brands {
+.c-social__brands {
   width: 100%;
   text-align: center;
   padding-top: 8px;
 }
 
-.social__icon {
+.c-social__icon {
   width: 25px;
   height: auto;
   margin: 0 15px;
 }
 
-.twitter__brand:hover, 
-.facebook__brand:hover,
-.pinterest__brand:hover,
-.linkedin__brand:hover {
+.c-twitter__brand:hover, 
+.c-facebook__brand:hover,
+.c-pinterest__brand:hover,
+.c-linkedin__brand:hover {
   opacity: 0.7;
 }
 
 /*-------------------------------------
 Website Links
 -------------------------------------*/
-.external__links {
+.c-external__links {
   text-align: center;
   font-weight: 300;
 
@@ -92,12 +92,18 @@ Website Links
 /*-------------------------------------
 About Information
 -------------------------------------*/
-.footer__info, .copyright__info {
+.c-footer__info, .c-copyright__info {
   text-align: center;
   color: #939598;
   font-weight: 300;
   font-size: 1.1em;
 }
+
+.c-copyright__info {
+  font-size: 1em;
+}
+
+
 
 /*-------------------------------------
 Media Queries
@@ -108,19 +114,19 @@ Media Queries
     margin: 0 15px;
   }
 
-  .social__links {
+  .c-social__links {
     width: 30%;
     margin-right: 5%;
     float: left;
   }
 
-  .external__links {
+  .c-external__links {
     width: 30%;
     margin-right: 5%;
     float: left;
   } 
 
-  .about__info {
+  .c-about__info {
     width: 30%;
     float: left;
   }
