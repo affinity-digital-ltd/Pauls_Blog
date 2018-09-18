@@ -8,10 +8,6 @@
   background-size: cover;
 }
 
-.c-header__container {
-  padding: 5px;
-}
-
 /*-------------------------------------
 Logo Styling
 -------------------------------------*/
@@ -31,6 +27,7 @@ Subscribe Form
 -------------------------------------*/
 .c-email__form {
   width: 90%;
+  height: 25px;
   position: absolute;
   bottom: 0;
   padding-bottom: 15px;

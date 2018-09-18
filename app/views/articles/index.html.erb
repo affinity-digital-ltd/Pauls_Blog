@@ -1,9 +1,9 @@
-<div class="container">
+<div class="o-container">
   <%= render 'shared/header' %>
 
   <main>
     <section class="c-section__welcome">
-      <div class="c-welcome__container">
+      <div class="o-welcome__container">
         <h1 class="c-main__headers">Paul Brighton Web Development</h1>
         <div class="c-header__divider"></div>
         <figure>
@@ -15,10 +15,10 @@
       </div>
     </section>
     <section class="c-section__featured">
-      <div class="c-featured__container">
+      <div class="o-featured__container">
         <h2 class="c-main__headers c-main__headers--clear">Featured Article</h2>
         <div class="c-header__divider--featured"></div>
-        <div class="c-articles__container--featured">
+        <div class="o-articles__container--featured">
           <%= link_to article_path(Article.featured), class: "c-article--path" do %>
             <div class="c-card__featured">
               <figure>
@@ -34,10 +34,10 @@
       </div>
     </section>
     <section class="c-section__latest">
-      <div class="c-latest__container">
+      <div class="o-latest__container">
         <h2 class="c-main__headers">Latest Articles</h2>
         <div class="c-header__divider"></div>
-        <div class="c-articles__container">
+        <div class="o-articles__container">
           <% @articles.each_with_index do |article, index| %>
             <%= link_to article_path(article), class: "c-article--path" do %>
             <div class="c-card">

@@ -1,0 +1,108 @@
+.o-articles__container {
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 3rem;
+  margin: 0 auto;
+}
+
+/*-------------------------------------
+Welcome Section 
+-------------------------------------*/
+.o-welcome__container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+/*-------------------------------------
+Featured Section 
+-------------------------------------*/
+.o-featured__container {
+  max-width: 1120px;
+  padding-bottom: 25px;
+  margin: 0 auto;
+
+  h2 {
+    padding-top: 20px;
+    font-weight: 300;
+  }
+}
+
+.o-articles__container--featured {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 3rem;
+  margin: 0 auto;
+
+  h3 {
+    padding: 0 25px;
+    color: #252525;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 400;
+    padding-top: 5px;
+  }
+
+  p {
+    color: #252525;
+    font-size: 1.1em;
+    margin: 15px 0;
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+/*-------------------------------------
+Latest Section 
+-------------------------------------*/
+.o-latest__container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/*-------------------------------------
+Article Preview Card
+-------------------------------------*/
+.o-articles__container h3 {
+  color: #252525;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 400;
+  padding-top: 5px;
+}
+
+.o-articles__container p {
+  color: #252525;
+  font-size: 1.1em;
+  margin: 15px 0;
+  text-align: center;
+  font-weight: 300;
+}
+
+/*-------------------------------------
+Media Query - Tablet
+-------------------------------------*/
+@media screen and (min-width: 768px) {
+  .o-articles__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*-------------------------------------
+Media Queries - Desktop
+-------------------------------------*/
+@media screen and (min-width: 960px) {
+  .o-articles__container {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .o-articles__container {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 15px;
+  }
+}
+

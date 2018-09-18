@@ -1,0 +1,27 @@
+.o-article__container {
+  min-width: 300px;
+  padding: 0 5%;
+  margin: 0 auto 35px;
+}
+
+/*-------------------------------------
+Media Queries
+-------------------------------------*/
+@media only screen and (min-width: 500px) {
+  .o-article__container {
+    width: 480px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .o-article__container {
+    width: 668px;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .o-article__container {
+    width: 750px;
+    padding: 0 30px;
+  }
+}

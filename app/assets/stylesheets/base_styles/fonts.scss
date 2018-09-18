@@ -1,13 +1,3 @@
-/* nunito-600 - latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Nunito SemiBold'), local('Nunito-SemiBold'),
-       url('nunito-v9-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('nunito-v9-latin-600.woff') format('woff'), /* Modern Browsers */
-}
-
 /* nunito-300 - latin */
 @font-face {
   font-family: 'Nunito';
@@ -28,16 +18,6 @@
        url('roboto-v18-latin-300.woff') format('woff'), /* Modern Browsers */
 }
 
-/* roboto-regular - latin */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'),
-       url('roboto-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('roboto-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
-}
-
 /* roboto-500 - latin */
 @font-face {
   font-family: 'Roboto';
@@ -46,36 +26,4 @@
   src: local('Roboto Bold'), local('Roboto-Bold'),
        url('roboto-v18-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
        url('roboto-v18-latin-500.woff') format('woff'), /* Modern Browsers */
-}
-
-/* roboto-700 - latin */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'),
-       url('roboto-v18-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('roboto-v18-latin-700.woff') format('woff'), /* Modern Browsers */
-}
-
-/* ubuntu-300 - latin */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Ubuntu Light'), local('Ubuntu-Light'),
-       url('ubuntu-v12-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-       url('ubuntu-v12-latin-300.woff') format('woff'), /* Modern Browsers */
-       url('ubuntu-v12-latin-300.ttf') format('truetype'), /* Needed for IOS Support */
-}
-
-/* ubuntu-500 - latin */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Ubuntu Light'), local('Ubuntu-Light'),
-       url('ubuntu-v12-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-       url('ubuntu-v12-latin-500.woff') format('woff'), /* Modern Browsers */
-       url('ubuntu-v12-latin-500.ttf') format('truetype'), /* Needed for IOS Support */
 }

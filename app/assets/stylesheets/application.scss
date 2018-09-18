@@ -1,9 +1,13 @@
 @import "base_styles/reset";
-@import "components/c-header";
+@import "base_styles/base";
 @import "base_styles/fonts";
+@import "components/c-base";
+@import "components/c-header";
 @import "components/c-main";
 @import "components/c-footer";
 @import "components/c-article";
-@import "base_styles/base";
-
-
+@import "objects/o-header";
+@import "objects/o-main";
+@import "objects/o-footer";
+@import "objects/o-article";
+@import "objects/o-base";

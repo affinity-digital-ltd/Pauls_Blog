@@ -1,17 +1,6 @@
-/*-------------------------------------
-Main Section 
--------------------------------------*/
 main {
   width: 100%;
   background-color: #f6f6f7;
-}
-
-.c-articles__container {
-  max-width: 90%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 3rem;
-  margin: 0 auto;
 }
 
 /*-------------------------------------
@@ -19,12 +8,6 @@ Welcome Section
 -------------------------------------*/
 .c-section__welcome {
   width: 100%;
-}
-
-.c-welcome__container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding-bottom: 20px;
 }
 
 .c-welcome__text {
@@ -52,47 +35,11 @@ Featured Section
   clear: both;
 }
 
-.c-featured__container {
-  max-width: 1120px;
-  padding-bottom: 25px;
-  margin: 0 auto;
-
-  h2 {
-    padding-top: 20px;
-    font-weight: 300;
-  }
-}
-
 .c-header__divider--featured {
   background-color: #f2f2f2;
   width: 90%;
   height: 1px;
   margin: 5px auto 20px;
-}
-
-.c-articles__container--featured {
-  width: 90%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 3rem;
-  margin: 0 auto;
-
-  h3 {
-    padding: 0 25px;
-    color: #252525;
-    text-align: center;
-    font-size: 1.6em;
-    font-weight: 400;
-    padding-top: 5px;
-  }
-
-  p {
-    color: #252525;
-    font-size: 1.1em;
-    margin: 15px 0;
-    text-align: center;
-    font-weight: 300;
-  }
 }
 
 .c-card__featured {
@@ -121,11 +68,6 @@ Featured Section
 /*-------------------------------------
 Latest Section 
 -------------------------------------*/
-.c-latest__container {
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
 .c-load__btn {
   width: 100%;
   text-align: center;
@@ -176,23 +118,7 @@ Article Preview Card
   }
 }
 
-.c-articles__container h3 {
-  color: #252525;
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: 400;
-  padding-top: 5px;
-}
-
-.c-articles__container p {
-  color: #252525;
-  font-size: 1.1em;
-  margin: 15px 0;
-  text-align: center;
-  font-weight: 300;
-}
-
-.article--path {
+.c-article--path {
   text-decoration: none;
 }
 
@@ -201,10 +127,6 @@ Media Query - Tablet
 -------------------------------------*/
 
 @media screen and (min-width: 768px) {
-  .c-articles__container {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .c-welcome__text {
     width: 90%;
     margin: 0 5%;
@@ -226,19 +148,8 @@ Media Query - Tablet
 Media Queries - Desktop
 -------------------------------------*/
 @media screen and (min-width: 960px) {
-  .c-articles__container {
-    padding-bottom: 20px;
-  }
-
   .c-welcome__img {
     padding-bottom: 35px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .c-articles__container {
-    grid-template-columns: 1fr 1fr 1fr;
-    padding-bottom: 15px;
   }
 }
 
