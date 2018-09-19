@@ -1,0 +1,67 @@
+.c-header__nav {
+  float: right;
+  margin: 5px 5px 0 0;
+}
+
+.c-nav__hamburger {
+  font-size: 2.8em;
+  color: #f2f2f2;
+  float: right;
+  margin-right: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.c-overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+
+  &-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  a:hover, a:focus {
+    color: #fff;
+  }
+
+  .c-closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+}
+
+/*-------------------------------------
+Media Queries
+-------------------------------------*/
+@media screen and (min-width: 768px) {
+  .c-nav__hamburger {
+    display: none;
+  } 
+}

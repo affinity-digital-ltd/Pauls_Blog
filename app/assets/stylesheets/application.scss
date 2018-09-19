@@ -1,13 +1,35 @@
 @import "base_styles/reset";
 @import "base_styles/base";
 @import "base_styles/fonts";
-@import "components/c-base";
+
 @import "components/c-header";
+@import "components/c-brand_logo";
+@import "components/c-hamburger_nav";
+@import "components/c-subscribe_form";
+@import "components/c-main_nav";
+
 @import "components/c-main";
+@import "components/c-welcome_section";
+@import "components/c-featured_section";
+@import "components/c-article_preview";
+@import "components/c-load_more_btn";
+
 @import "components/c-footer";
+@import "components/c-external_links";
+@import "components/c-about_info";
+@import "components/c-social_media";
+
 @import "components/c-article";
-@import "objects/o-header";
+@import "components/c-catagory";
+@import "components/c-article_images";
+
+@import "objects/o-container";
 @import "objects/o-main";
+@import "objects/o-header";
 @import "objects/o-footer";
+@import "objects/o-welcome_section";
+@import "objects/o-featured_section";
+@import "objects/o-latest_section";
+@import "objects/o-article_preview";
+
 @import "objects/o-article";
-@import "objects/o-base";

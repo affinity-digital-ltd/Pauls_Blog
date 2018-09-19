@@ -1,0 +1,30 @@
+.c-external__links {
+  text-align: center;
+  font-weight: 300;
+
+  li {
+    font-size: 1.1em;
+    list-style-type: none;
+    font-weight: 300;
+  }
+
+  li a {
+    color: #939598;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/*-------------------------------------
+Media Queries
+-------------------------------------*/
+@media screen and (min-width: 773px) {
+  .c-external__links {
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+  } 
+}
