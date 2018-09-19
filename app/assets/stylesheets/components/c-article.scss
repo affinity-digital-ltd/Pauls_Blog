@@ -27,4 +27,15 @@
     font-weight: 300;
     margin-bottom: 25px;
   }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    margin: 45px auto 35px;
+    border-radius: 5px;
+  }
+  
+  &--path {
+    text-decoration: none;
+  }
 }

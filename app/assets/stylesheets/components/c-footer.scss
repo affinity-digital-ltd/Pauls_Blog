@@ -34,19 +34,3 @@
   }
 }
 
-/*-------------------------------------
-Media Queries
--------------------------------------*/
-@media screen and (min-width: 773px) {
-  .c-footer__nav--list li {
-    font-size: 1.3em;
-    margin: 0 15px;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .c-footer__nav--list li {
-    margin: 0 25px;
-    font-size: 1.4em;
-  }
-}

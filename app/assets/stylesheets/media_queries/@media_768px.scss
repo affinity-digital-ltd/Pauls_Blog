@@ -1,0 +1,68 @@
+@media screen and (min-width: 768px) {
+  .o-articles__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .c-main__nav {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 420px;
+
+    ul {
+      display: block;
+    }
+  }
+
+  .c-nav__hamburger {
+    display: none;
+  } 
+
+  .c-brand__logo {
+    margin: 10px 0 0 25px;
+  }
+
+  .c-email__form {
+    width: 275px;
+    top: 0;
+    left: auto;
+    right: 0;
+    padding: 35px 35px 0 0;
+  } 
+
+  .c-welcome__text {
+    width: 90%;
+    margin: 0 5%;
+  }
+  
+  .c-welcome__img {
+    width: 40%;
+    margin: 0 5%;
+    float: right;
+    padding-bottom: 15px;
+  }
+
+  .c-headers--clear {
+    clear: both;
+  }
+
+  .c-external__links, .c-social__links {
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+  } 
+
+  .c-about {
+    width: 30%;
+    float: left;
+  }
+
+  .c-footer__nav--list li {
+    font-size: 1.3em;
+    margin: 0 15px;
+  }
+
+  .o-article__container {
+    width: 668px;
+  }
+}

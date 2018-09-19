@@ -29,30 +29,3 @@
   }
 }
 
-/*-------------------------------------
-Media Queries
--------------------------------------*/
-@media screen and (min-width: 768px) {
-  .c-main__nav {
-    display: block;
-    width: 500px;
-    margin: 0 auto;
-    padding-top: 420px;
-
-    ul {
-      display: block;
-    }
-  } 
-}
-
-@media screen and (min-width: 960px) {
-  .c-main__nav {
-    width: 650px;
-
-    li {
-      margin: 0 25px;
-      font-size: 1.4em;
-    }
-  }
-}
-

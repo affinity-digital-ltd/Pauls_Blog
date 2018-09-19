@@ -2,10 +2,10 @@
   <%= render 'shared/header' %>
 
   <main>
-    <section class="c-section__welcome">
+    <section class="c-welcome">
       <div class="o-welcome__container">
-        <h1 class="c-main__headers">Paul Brighton Web Development</h1>
-        <div class="c-header__divider"></div>
+        <h1 class="c-headers">Paul Brighton Web Development</h1>
+        <div class="c-headers__divider"></div>
         <figure>
           <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "c-welcome__img") %>
         </figure>
@@ -14,10 +14,10 @@
         <p class="c-welcome__text">That they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
       </div>
     </section>
-    <section class="c-section__featured">
+    <section class="c-featured">
       <div class="o-featured__container">
-        <h2 class="c-main__headers">Featured Article</h2>
-        <div class="c-header__divider--featured"></div>
+        <h2 class="c-headers">Featured Article</h2>
+        <div class="c-headers__divider--featured"></div>
         <div class="o-articles__container--featured">
           <%= link_to article_path(Article.featured), class: "c-article--path" do %>
             <div class="c-card__featured">
@@ -35,8 +35,8 @@
     </section>
     <section class="c-section__latest">
       <div class="o-latest__container">
-        <h2 class="c-main__headers">Latest Articles</h2>
-        <div class="c-header__divider"></div>
+        <h2 class="c-headers">Latest Articles</h2>
+        <div class="c-headers__divider"></div>
         <div class="o-articles__container">
           <% @articles.each_with_index do |article, index| %>
             <%= link_to article_path(article), class: "c-article--path" do %>

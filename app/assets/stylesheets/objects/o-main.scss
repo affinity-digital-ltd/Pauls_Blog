@@ -6,25 +6,5 @@
   margin: 0 auto;
 }
 
-/*-------------------------------------
-Media Queries
--------------------------------------*/
-@media screen and (min-width: 768px) {
-  .o-articles__container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
-@media screen and (min-width: 960px) {
-  .o-articles__container {
-    padding-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .o-articles__container {
-    grid-template-columns: 1fr 1fr 1fr;
-    padding-bottom: 15px;
-  }
-}
 

@@ -1,7 +1,7 @@
 function openNav () {
-  document.querySelector("div.c-overlay[data-behavior='myNav']").style.width = '100%';
+  document.querySelector("div[data-behavior='myNav']").style.width = '100%';
 }
 
 function closeNav () {
-  document.querySelector("div.c-overlay[data-behavior='myNav']").style.width = '0%';
+  document.querySelector("div[data-behavior='myNav']").style.width = '0%';
 }
