@@ -1,30 +1,30 @@
 <footer class="c-footer">
   <div class="o-footer__container">
     <nav>
-      <ul class="c-footer__nav--list">
+      <ul class="c-footer-nav">
         <li><%= link_to "home", root_path %></li>
         <li><%= link_to "about", '#' %></li>
         <li><%= link_to "portfolio", '#' %></li>
         <li><%= link_to "contact", '#' %></li>
       </ul>
     </nav>
-    <div class="c-social__links">
+    <div class="c-social">
       <h3>Social Media</h3>
       <div class="c-social__brands">
-        <%= link_to image_tag("twitter.svg",  alt: "Twitter logo", class: "c-social__icon c-twitter__brand"), "https://twitter.com/paulbrighton_" %>
-        <%= link_to image_tag("facebook.svg", alt: "Facebook logo", class: "c-social__icon c-facebook__brand"), "https://www.facebook.com/paul.brighton.10" %>
-        <%= link_to image_tag("pinterest.svg", alt: "Pinterest logo", class: "c-social__icon c-pinterest__brand"), "https://www.pinterest.co.uk/paulbrightonfda/" %>
-        <%= link_to image_tag("linkedin.svg", alt: "LinkedIn logo", class: "c-social__icon c-linkedin__brand"), "https://www.linkedin.com/in/paulbrighton/" %>
+        <%= link_to image_tag("twitter.svg",  alt: "Twitter logo", class: "c-social__icon c-social__icon--twitter"), "https://twitter.com/paulbrighton_" %>
+        <%= link_to image_tag("facebook.svg", alt: "Facebook logo", class: "c-social__icon c-social__icon--facebook"), "https://www.facebook.com/paul.brighton.10" %>
+        <%= link_to image_tag("pinterest.svg", alt: "Pinterest logo", class: "c-social__icon c-social__icon--pinterest"), "https://www.pinterest.co.uk/paulbrightonfda/" %>
+        <%= link_to image_tag("linkedin.svg", alt: "LinkedIn logo", class: "c-social__icon c-social__icon--linkedin"), "https://www.linkedin.com/in/paulbrighton/" %>
       </div>
     </div>
-    <div class="c-external__links">
+    <div class="c-external-links">
       <h3>Useful Links</h3>
       <li><%= link_to "ProCoders Bootcamp", 'https://procoders.co.uk/' %></li>
       <li><%= link_to "MDN Web Docs", 'https://developer.mozilla.org/en-US/' %></li>
       <li><%= link_to "Ruby on Rails Guides", 'https://guides.rubyonrails.org/' %></li>
       <li><%= link_to "CanIUse", 'https://caniuse.com/' %></li>
     </div>
-    <div class="c-about">
+    <div class="c-about-info">
       <h3>About</h3>
       <p>Designed by Paul Brighton</p>
       <p>Built with Ruby on Rails</p>

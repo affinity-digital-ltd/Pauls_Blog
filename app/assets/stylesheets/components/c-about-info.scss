@@ -1,0 +1,15 @@
+.c-about-info {
+  p {
+  text-align: center;
+  color: #939598;
+  font-weight: 300;
+  font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c-about-info {
+    width: 30%;
+    float: left;
+  }
+}

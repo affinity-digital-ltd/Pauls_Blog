@@ -1,4 +1,4 @@
-.c-card {
+.c-article-preview {
   margin: 25px auto 25px;
   border-radius: 15px;
   width: 100%;
@@ -13,7 +13,7 @@
     height: auto;
     margin: 0 auto;
     border-radius: 15px;
-    }
+  }
 
   &__text {
     border: 0.5px solid #c5c5c5;
@@ -48,6 +48,23 @@
     margin-top: -30px;
     position: relative; 
     background-color: #fff;
+  }
+
+  h3 {
+    color: #252525;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 400;
+    padding-top: 5px;
+    font-weight: 500;
+  }
+
+  p {
+    color: #252525;
+    font-size: 1.1em;
+    margin: 15px 0;
+    text-align: center;
+    font-weight: 300;
   }
 }
 

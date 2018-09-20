@@ -11,7 +11,7 @@
     font-weight: 300;
   }
   // Footer Navigation
-  &__nav--list {
+  &-nav {
     text-align: center;
     padding: 20px 0 5px 0;
   
@@ -30,6 +30,28 @@
   
     li a:hover {
       color: #939598;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c-footer {
+    &-nav {
+      li {
+        font-size: 1.3em;
+        margin: 0 15px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .c-footer {
+    &-nav {
+      li {
+        margin: 0 25px;
+        font-size: 1.4em;
+      }
     }
   }
 }
