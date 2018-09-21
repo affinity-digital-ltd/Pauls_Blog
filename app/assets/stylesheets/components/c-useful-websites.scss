@@ -1,0 +1,32 @@
+.c-useful-websites {
+  &__links {
+    text-align: center;
+    font-weight: 300;
+
+    li {
+      font-size: 1.1em;
+      list-style-type: none;
+      font-weight: 300;
+    }
+  
+    li a {
+      color: #939598;
+      text-decoration: none;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c-useful-websites {
+    &__links {
+        width: 30%;
+        margin-right: 5%;
+        float: left;
+    }
+  }
+}
+

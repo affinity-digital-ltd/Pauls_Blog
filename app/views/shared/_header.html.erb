@@ -1,0 +1,35 @@
+ <header class="c-header">
+  <div class="o-header__container">
+    <%= link_to root_path do %>
+      <figure>
+        <%= image_tag("logo.png", alt: "Paul Brighton Web Development Logo", class: "c-brand-logo") %>
+      </figure>
+    <% end %>
+    <%= form_with(url: "/search", method: "get", class: "c-subscribe-form") do %>
+      <div class="c-subscribe-form__container">
+        <%= text_field_tag :email, '', type: :email, placeholder: "Email", required: true, class: "c-subscribe-form__input" %>
+        <%= button_tag "Subscribe", type: "submit", class: "c-subscribe-form__btn" %>
+      </div>
+    <% end %>
+    <nav class="c-header__nav">
+      <div data-behavior="myNav" class="c-overlay">
+        <a href="javascript:void(0)" class="c-closebtn" onclick="closeNav()">&times;</a>
+        <div class="c-overlay-content">
+          <li><%= link_to "home", root_path %></li>
+          <li><%= link_to "about", '#' %></li>
+          <li><%= link_to "portfolio", '#' %></li>
+          <li><%= link_to "contact", '#' %></li>
+        </div>
+      </div>
+      <span class="c-hamburger-nav" onclick="openNav()">&#9776;</span>
+    </nav>
+    <nav class="c-main-nav">
+      <ul>
+        <li><%= link_to "home", root_path %></li>
+        <li><%= link_to "about", '#' %></li>
+        <li><%= link_to "portfolio", '#' %></li>
+        <li><%= link_to "contact", '#' %></li>
+      </ul>
+    </nav>
+  </div>
+</header>

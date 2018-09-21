@@ -1,0 +1,54 @@
+/* Styles for admin pages */
+
+/* Main styles */
+body {
+  background-color: #f3f3f3;
+}
+
+h1, .admin__h2 {
+  font-weight: 700;
+  text-align: center;
+  padding: 25px 0 15px 0;
+  font-size: 2rem;
+}
+
+/* Header */
+header {
+  width: 100%;
+}
+
+/* Navigation */
+.navbar {
+  background-color: #DC4A4A;
+  padding-bottom: 25px;
+}
+
+.navbar-brand {
+  padding-top: 20px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-toggler{
+  margin-top: 20px;
+}
+
+li {
+  list-style-type: none;
+  padding-top: 15px;
+  font-weight: 700;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+}
+
+/* Table */
+.table__links {
+  color: #000;
+}
+
+.table__links:hover {
+  color: #000;
+  text-decoration: underline;
+}

@@ -1,0 +1,8 @@
+{
+  "highlight-matching-tag.leftStyle": {
+    "borderWidth": "0 0 0 2px",
+    "borderStyle": "solid",
+    "borderColor": "red",
+    "borderRadius": "5px"
+  }
+}

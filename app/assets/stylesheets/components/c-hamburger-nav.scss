@@ -1,0 +1,16 @@
+.c-hamburger-nav {
+  font-size: 2.8em;
+  color: #f2f2f2;
+  float: right;
+  margin-right: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c-hamburger-nav {
+    display: none;
+  } 
+}

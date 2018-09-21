@@ -1,0 +1,21 @@
+.c-headers {
+  font-weight: 300;
+  font-size: 2em;
+  margin: 20px 5% 0;
+  font-weight: 300;
+
+  &__divider {
+    width: 90%;
+    height: 1px;
+    background-color: #252525;
+    margin: 5px auto 20px;
+  }
+
+  &__divider--featured {
+    background-color: #f2f2f2;
+    width: 90%;
+    height: 1px;
+    margin: 5px auto 20px;
+  }
+}
+
