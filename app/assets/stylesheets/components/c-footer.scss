@@ -11,7 +11,7 @@
     font-weight: 300;
   }
   // Footer Navigation
-  &-nav {
+  &__nav {
     text-align: center;
     padding: 20px 0 5px 0;
   
@@ -36,7 +36,7 @@
 
 @media screen and (min-width: 768px) {
   .c-footer {
-    &-nav {
+    &__nav {
       li {
         font-size: 1.3em;
         margin: 0 15px;
@@ -47,7 +47,7 @@
 
 @media screen and (min-width: 960px) {
   .c-footer {
-    &-nav {
+    &__nav {
       li {
         margin: 0 25px;
         font-size: 1.4em;
