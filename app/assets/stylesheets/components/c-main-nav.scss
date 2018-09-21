@@ -1,0 +1,54 @@
+.c-main-nav {
+  display: none;
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 420px;
+
+  ul {
+    display: none;
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    margin: 0 15px;
+    padding-bottom: 5px;
+  }
+
+  a {
+    color: #f2f2f2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #939598;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c-main-nav {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 420px;
+
+    ul {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .c-main-nav {
+    width: 650px;
+
+    li {
+      margin: 0 25px;
+      font-size: 1.4em;
+    }
+  }
+}

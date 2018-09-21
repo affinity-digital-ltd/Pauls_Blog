@@ -1,28 +1,28 @@
-<h1>Show Page</h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+ <%= render 'shared/header' %>
 
-<p>
-  <strong>Author:</strong>
-  <%= @article.author %>
-</p>
+<article class="o-article__container">
+  <div class="c-article">
+    <h2 class="c-article__header"><%= @article.title %></h2>
+    <div class="c-article__header--divider"></div>
+    <h3 class="c-article__author">Article by <%= @article.author %></h3>
+    <time class="c-article__published">Published: <%= @article.created_at.strftime("%d-%m-%Y") %></time>
+    <figure>
+      <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "c-article__image") %>
+    </figure>
+    <div class="c-article__text">
+      <p><%= @article.text %></p>
+    </div>
+    <h4 class="c-catagory">Catagories:</h4>
+    <div class="catagory__buttons">
+      <%= button_tag "HTML", type: "button", class: "c-catagory__btn" %>
+      <%= button_tag "CSS", type: "button", class: "c-catagory__btn" %>
+      <%= button_tag "JavaScript", type: "button", class: "c-catagory__btn" %>
+      <%= button_tag "Ruby", type: "button", class: "c-catagory__btn" %>
+    </div>
+  </div>
+</article>
 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
+ <%= render 'shared/footer' %>
 
-<p>
-  <strong>Time:</strong>
-  <%= @article.created_at %>
-</p>
 
-<%= render partial: 'comments/form' %>
-
-<h3>Comments</h3>
-<%= render partial: 'articles/comment', collection: @article.comments %>
-
-<%= link_to 'Back to Articles', articles_path %>
