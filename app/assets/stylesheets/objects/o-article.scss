@@ -30,34 +30,3 @@
     }
   }
 }
-
-// - Naming files so that they do not contain BEM nomenclature 
-// - Each file should only contain 1 Block class
-// - Each file should contain it's own media queries
-// - Block names should be intention revealing 
-
-// BEM = block__element--modifier
-// Each file name should match the `block` name
-// In this file the block name is `article`
-// Does the block name want to be article or article-container?
-// Is container an element?
-
-// .o-article-container {
-//   min-width: 300px;
-//   padding: 0 5%;
-//   margin: 0 auto 35px;
-// }
-
-// .o-article {
-//   &__container {
-//     min-width: 300px;
-//     padding: 0 5%;
-//     margin: 0 auto 35px;
-//   }
-// }
-
-// .o-container {
-//   min-width: 300px;
-//   padding: 0 5%;
-//   margin: 0 auto 35px;
-// }
