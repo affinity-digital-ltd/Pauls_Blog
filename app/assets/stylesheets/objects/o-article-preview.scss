@@ -1,4 +1,7 @@
 .o-article-preview {
+  max-width: 1120px;
+  margin: 0 auto;
+  
   &__container {
     max-width: 90%;
     display: grid;

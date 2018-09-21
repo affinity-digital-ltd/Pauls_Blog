@@ -3,7 +3,7 @@
 
   <main>
     <section class="c-intro">
-      <div class="o-welcome__container">
+      <div class="o-intro__container">
         <h1 class="c-headers">Paul Brighton Web Development</h1>
         <div class="c-headers__divider"></div>
         <figure>
@@ -19,12 +19,12 @@
         <h2 class="c-featured__header">Featured Article</h2>
         <div class="c-headers__divider--featured"></div>
         <div class="o-article-preview__container--featured">
-          <%= link_to article_path(Article.featured), class: "c-article--path" do %>
+          <%= link_to article_path(Article.featured), class: "c-article__path" do %>
             <div class="c-article-preview__featured">
               <figure>
                 <%= image_tag("html.jpg", alt: "An HTML illustration", class: "c-article-preview__image") %>
               </figure>
-              <div class="c-article-preview__text--featured">
+              <div class="c-article-preview__featured-text">
                 <h3><%= Article.featured.title %></h3>
                 <p><%= Article.featured.text.truncate_words(10) %></p>
               </div>
@@ -34,12 +34,12 @@
       </div>
     </section>
     <section class="c-section__latest">
-      <div class="o-latest__container">
+      <div class="o-article-preview">
         <h2 class="c-headers">Latest Articles</h2>
         <div class="c-headers__divider"></div>
         <div class="o-article-preview__container">
           <% @articles.each_with_index do |article, index| %>
-            <%= link_to article_path(article), class: "c-article--path" do %>
+            <%= link_to article_path(article), class: "c-article__path" do %>
             <div class="c-article-preview">
               <figure>
                 <%= image_tag("mac_user.jpg", alt: "A mobile phone in a hand", class: "c-article-preview__image") %>
@@ -52,7 +52,7 @@
             <% end %>
           <% end %>
         </div>
-        <p class="c-load__btn"><%= link_to "Load More..." %></p>
+        <p class="c-load-btn"><%= link_to "Load More..." %></p>
       </div>
     </section>
   </main>
