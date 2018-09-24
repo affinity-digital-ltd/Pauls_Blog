@@ -50,3 +50,38 @@
     padding: 35px 35px 0 0;
   } 
 }
+
+/*-----------------------------------
+-------------------------------------
+-----------------------------------*/
+
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 0 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 0 5px 0;
+  padding: 10px;
+  background-color: yellow;
+  border: 0;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 0 ;
+  color: white;
+  cursor: pointer;
+  margin-left: -1px;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
