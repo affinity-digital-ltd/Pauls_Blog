@@ -5,20 +5,12 @@
         <%= image_tag("logo.png", alt: "Paul Brighton Web Development Logo", class: "c-brand-logo") %>
       </figure>
     <% end %>
-    <%= form_with(url: "/search", method: "get", class: "c-subscribe-form") do %>
-      <div class="c-subscribe-form__container">
+    <div class="c-subscribe-form">
+      <%= form_with(class: "c-subscribe-form__container", url: "/search", method: "get") do %>
         <%= text_field_tag :email, '', type: :email, placeholder: "Email", required: true, class: "c-subscribe-form__input" %>
         <%= button_tag "Subscribe", type: "submit", class: "c-subscribe-form__btn" %>
-      </div>
-    <% end %>
-
-    <form class="form-inline" action="/action_page.php">
-  <input type="email" id="email" placeholder="Enter email" name="email">
-  
-  <button type="submit">Subscribe</button>
-</form>
-
-
+      <% end %>
+    </div>
     <nav class="c-header__nav">
       <div data-behavior="myNav" class="c-overlay">
         <a href="javascript:void(0)" class="c-closebtn" onclick="closeNav()">&times;</a>
