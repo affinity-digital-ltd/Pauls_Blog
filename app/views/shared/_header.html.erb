@@ -5,11 +5,13 @@
         <%= image_tag("logo.png", alt: "Paul Brighton Web Development Logo", class: "c-brand-logo") %>
       </figure>
     <% end %>
+
     <div class="c-subscribe-form">
-      <%= form_with(class: "c-subscribe-form__container", url: "/search", method: "get") do %>
-        <%= text_field_tag :email, '', type: :email, placeholder: "Email", required: true, class: "c-subscribe-form__input" %>
-        <%= button_tag "Subscribe", type: "submit", class: "c-subscribe-form__btn" %>
-      <% end %>
+      <form action="https://twitter.us17.list-manage.com/subscribe/post?u=5e14f42c2626123e850bb543f&amp;id=5dd22b22a9" method="post" name="mc-embedded-subscribe-form" class="c-subscribe-form__container" target="_blank" novalidate>
+        <input type="email" value="" placeholder="Email" name="EMAIL" class="c-subscribe-form__input" id="mce-EMAIL">
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5e14f42c2626123e850bb543f_5dd22b22a9" tabindex="-1" value=""></div>
+        <input type="submit" value="Subscribe" name="subscribe" class="c-subscribe-form__btn">
+      </form>
     </div>
     <nav class="c-header__nav">
       <div data-behavior="myNav" class="c-overlay">

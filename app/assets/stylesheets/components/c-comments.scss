@@ -1,13 +1,13 @@
-.o-article {
+.c-comments {
   &__container {
     min-width: 300px;
     padding: 0 5%;
-    margin: 0 auto 50px;
+    margin: 0 auto;
   }
 }
 
 @media only screen and (min-width: 500px) {
-  .o-article {
+  .c-comments {
     &__container {
       width: 480px;
     }
@@ -15,7 +15,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .o-article {
+  .c-comments {
     &__container {
       width: 668px;
     }
@@ -23,7 +23,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .o-article {
+  .c-comments {
     &__container {
       width: 750px;
       padding: 0 30px;
