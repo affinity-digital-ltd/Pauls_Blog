@@ -23,7 +23,7 @@ RSpec.describe "articles and home page", type: :feature do
       visit article_path(article)
 
       within '#disqus_thread' do
-      expect(page).to have_xpath '//iframe'
+        expect(page).to have_xpath '//iframe'
       end
     end
   end
