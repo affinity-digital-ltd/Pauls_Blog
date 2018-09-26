@@ -5,7 +5,7 @@
     this.shortname = "pauls-web-dev-blog";
     this.page.identifier = "article-<%= @article.id %>";
     this.page.title = "<%= @article.title %>";
-    this.page.url = "<%= url_for(host: ENV['APPLICATION_HOST']) %>";
+    this.page.url = "<%= article_url(@article) %>";
   };
 
   (function() { // DON'T EDIT BELOW THIS LINE
