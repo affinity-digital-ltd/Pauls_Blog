@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  root 'articles#index'
   get 'static_pages/about'
   get 'static_pages/portfolio'
-  root 'articles#index'
-
+  get 'static_pages/contact'
+  
   namespace :admin do
     root 'articles#index'
     resources :articles, except: [:show]

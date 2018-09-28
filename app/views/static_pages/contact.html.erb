@@ -1,0 +1,27 @@
+<%= render 'shared/header' %>
+
+<h2>Contact</h2>
+<section class="contact-form">
+  <form method="post" name="myemailform" action="contact.php">       
+    <fieldset>
+      <label>Name<input type="text" name="name" placeholder="Enter name here."></label>
+      <label>Email<input type="email" name="email" placeholder="Enter email here."></label>
+      <label>Message<textarea name="message" placeholder="Enter your message here." ></textarea></label>
+      <input type="submit" name="send" value="Send" />
+    </fieldset>
+  </form>
+</section>
+
+<section class="contact-details">
+  <h3>Connect with me</h3>
+  <p>I am conveniently situated between Wakefield and Doncaster in Fitzwilliam, Wakefield and have access to the train station that connects to Leeds and Sheffield.</p>
+  <p>Feel free to contact me with any comments or inquires using the contact form or connect with me on social media.</p>
+  <ul>
+    <li><%= link_to "Twitter", root_path %></li>
+    <li><%= link_to "Facebook", root_path %></li>
+    <li><%= link_to "Pinterest", root_path %></li>
+    <li><%= link_to "LinkedIn", root_path %></li>
+  </ul>
+</section>
+
+<%= render 'shared/footer' %>
