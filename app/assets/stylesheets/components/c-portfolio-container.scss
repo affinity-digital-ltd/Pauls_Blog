@@ -1,0 +1,31 @@
+.c-portfolio-container {
+  width: 100%;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    margin: 15px auto 25px;
+    border-radius: 5px;
+  }
+
+  h4 {
+    font-weight: 300;
+    font-size: 1.9em;
+    margin: 0 0 5px;
+    text-align: center;
+  }
+
+  &__text {
+    
+    p {
+      font-weight: 300;
+      font-size: 1.1em;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+
+
+

@@ -1,63 +1,117 @@
+
+
 <%= render 'shared/header' %>
 
-<h2>Portfolio</h2>
+<div class="o-portfolio__container">
 
-<h3>Ruby on Rails</h3>
-<%= image_tag("ruby.jpg", alt: "A Ruby logo") %>
-<p>I have done a few simple apps using Ruby on Rails but this website you are reading now is my first full web app built with Rails. It includes an admin panel for adding, updating and deleting articles which in the future could be available to users to add their own articles to the site.</p>
-<p>The CSS has been written with BEM and Namespaces and I have used SASS to enable nesting of styles. The SASS files have been broken down into objects and components to help with the organisation which in the future will make it easy to update parts of the site.</p>
-<p>In the near future, the front-end will be rebuilt using ReactJS and GraphQL will be implemented to interact with the database.</p>
+  <h2>Portfolio</h2>
+  <div class="o-portfolio__container--divider"></div>
 
-<h3>Javascript</h3>
-<h4>Rock, Paper, Scissors</h4>
-<%= image_tag("rock.png", alt: "A smiling animated rock") %>
-<p>After completing the HTML and CSS part of the ProCoders course, I moved on to learning JavaScript and my first project was to build a Rock, Paper, Scissors game.</p>
-<p>This includes clickable images and a score board that updates and let the player know whether they have won the game or lost to the computer, it will then ask the player if they want to play again.</p>
-<p>Interested? You can play the game by clicking on the image opposite.</p>
+  
+    <div class="c-portfolio-container">
+      <%= image_tag("ruby.jpg", alt: "A Ruby logo") %>
+      <div class="c-portfolio-container__text">
+        <p>I have done a few simple apps using Ruby on Rails but this website you are reading now is my first full web app built with Rails. It includes an admin panel for adding, updating and deleting articles which in the future could be available to users to add their own articles to the site.</p>
+        <p>The CSS has been written with BEM and Namespaces and I have used SASS to enable nesting of styles. The SASS files have been broken down into objects and components to help with the organisation which in the future will make it easy to update parts of the site.</p>
+        <p>In the near future, the front-end will be rebuilt using ReactJS and GraphQL will be implemented to interact with the database.</p>
+      </div>
+      </div>
 
-<h4>Etch-a-Sketch</h4>
-<%= image_tag("Etch A Sketch.png", alt: "An animated etch a sketch") %>
-<p>My second challenge was to use DOM manipulation to make a digital version of the popular Etch-a-Sketch toy. </p>
-<p>It uses many divs on the screen that can be filled in with a different colour in order to let the user create images with the mouse. It also gives the user the option to change the thickness of the line they want to use to draw their pictures.</p>
-<p>Want to draw something? You can try it here.</p>
+      <h2>Rock, Paper, Scissors</h2>
+      <div class="o-portfolio__container--divider"></div>
 
-<h4>Calculator</h4>
-<%= image_tag("calculator.png", alt: "An animated calculator") %>
-<p>My final challenge was to create a simple calculator using CSS, HTML and JavaScript. The calculator allows you to add, subtract, divide and multiply numbers by clicking the buttons with a mouse.</p>
-<p>When styling the calculator, I used CSS Grid to layout the buttons, something I had not used before but is a very useful tool for laying out pages in CSS.</p>
-<p>Need to do some sums, use my calculator online here.</p>
+      <div class="c-portfolio-container">
+        <%= image_tag("rock.png", alt: "A Ruby logo") %>
+        <div class="c-portfolio-container__text">
+          <p>After completing the HTML and CSS part of the ProCoders course, I moved on to learning JavaScript and my first project was to build a Rock, Paper, Scissors game.</p>
+          <p>This includes clickable images and a score board that updates and let the player know whether they have won the game or lost to the computer, it will then ask the player if they want to play again.</p>
+          <p>Interested? You can play the game by clicking on the image above.</p>
+        </div>
+      </div>
 
-<h3>CSS</h3>
-<h4>Android Logo</h4>
-<%= image_tag("android.png", alt: "The android logo") %>
-<p>I have to admit, I did use an online tutorial that can be viewed here to build the Android logo, but it was good experience as it was more complex than anything I had done before with CSS. If there’s one way to get better at CSS, it’s practice, practice, practice. </p>
-<p>It uses CSS transform to allow the head and arms to move when the mouse cursor is hovered over.</p>
-<p>Check it out here.</p>
+      <h2>Etch-a-Sketch</h2>
+      <div class="o-portfolio__container--divider"></div>
+      <div class="c-portfolio-container">
+        <%= image_tag("Etch A Sketch.png", alt: "A Ruby logo") %>
+        <div class="c-portfolio-container__text">
+          <p>My second challenge was to use DOM manipulation to make a digital version of the popular Etch-a-Sketch toy. </p>
+          <p>It uses many divs on the screen that can be filled in with a different colour in order to let the user create images with the mouse. It also gives the user the option to change the thickness of the line they want to use to draw their pictures.</p>
+          <p>Want to draw something? You can try it here.</p>
+        </div>
+      </div>
 
-<h3>University</h3>
-<h4>The Abandoned Container</h4>
-<%= image_tag("abandoned.jpg", alt: "A shipping container") %>
-<p>My first assignment at the University Centre at Wakefield College was to build a website for an inanimate object within 500 metres of my home.</p>
-<p>The website was based on a shipping container and was the first full website that I have built, it was only a fixed width site but provided me with the basic HTML and CSS skills that I would need in the future.</p>
-<p>The 3 page website is available to view by click this link.</p>
+      <h2>Calculator</h2>
+      <div class="o-portfolio__container--divider"></div>
+      <div class="c-portfolio-container">
+        <%= image_tag("calculator.png", alt: "A Ruby logo") %>
+        <div class="c-portfolio-container__text">
+          <p>My final challenge was to create a simple calculator using CSS, HTML and JavaScript. The calculator allows you to add, subtract, divide and multiply numbers by clicking the buttons with a mouse.</p>
+          <p>When styling the calculator, I used CSS Grid to layout the buttons, something I had not used before but is a very useful tool for laying out pages in CSS.</p>
+          <p>Need to do some sums, use my calculator online here.</p>
+        </div>
+      </div>
 
-<h4>Gnomegeddon</h4>
-<%= image_tag("gnomegeddon.png", alt: "The Gnomegeddon logo") %>
-<p>My final assignment at university was to design, market and build a website for a game called Gnomegeddon made by the game design students at the university centre.</p>
-<p>This was an improvement on my first website due to it being responsive and including things like a full screen video header, a dropdown navigation menu and it was designed as a single page website due to the amount of content that was available.</p>
-<p>The website is still available to view here.</p>
+      <h2>Android Logo</h2>
+      <div class="o-portfolio__container--divider"></div>
 
-<h3>Photography</h3>
-<h4>Stock Photography</h4>
-<div data-id='4a80991c-9fef-4286-be97-8475c5192bec' class='sstk_widget' style='position: relative; width: 300px; height: 250px;'> <a href="https://submit.shutterstock.com" target="_blank" style="position: absolute; bottom: -1px; right: 1px;"> <img src="https://sstkcbstorage.blob.core.windows.net/content/img/red_grey.png" style="height: 26px;"/> </a><script type='text/javascript'>window._wdata = window._wdata || [];_wdata.push({server_url: 'https://promote.shutterstock.com', widget_id: '4a80991c-9fef-4286-be97-8475c5192bec', host_url: document.URL,width: 300,height: 250});(function(){if (typeof (alensa_widget) !== 'undefined' ) return;var alensa_js = document.createElement('script'); alensa_js.type = 'text/javascript'; alensa_js.async = true;alensa_js.id = 'alensa_w_script';alensa_js.src = 'https://promote.shutterstock.com/content/embed.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(alensa_js, s);})();</script></div>
-<p>I have been a photographer since 2011 and my interest in travel led me into food photography.</p>
-<p>I have a portfolio on Shutterstock of over 3400 images, mainly of food from around the world but there is some travel photography in there too. I also have my portfolio available on other stock photography sites such as iStock and Adobe Stock.</p>
-<p>Feel free to go have a look by clicking the links, be warned, it may make you hungry.</p>
+      <div class="c-portfolio-container">
+        <%= image_tag("android.png", alt: "A Ruby logo") %>
+        <div class="c-portfolio-container__text">
+          <p>I have to admit, I did use an online tutorial that can be viewed here to build the Android logo, but it was good experience as it was more complex than anything I had done before with CSS. If there’s one way to get better at CSS, it’s practice, practice, practice. </p>
+          <p>It uses CSS transform to allow the head and arms to move when the mouse cursor is hovered over.</p>
+          <p>Check it out here.</p>
+        </div>
+      </div>
 
-<h4>Yummy Eats Cookbook</h4>
-<%= image_tag("yummyeats.jpg", alt: "Yummy Eats cookbook cover") %>
-<p>I really wanted to make a cookbook and that is where I learned some design for print skills using Adobe InDesign. The cookbook is called Yummy Eats and contains 50 of my favourite dishes from around the world.</p>
-<p>All the recipes and photography are by myself apart from some Brazilian dishes that were written by my wife, Thais. Thais was also responsible for the food styling in all my food photography.</p>
-<p>The book is available as a digital download at iBooks https://itunes.apple.com/gb/book/yummy-eats/id1095148851?mt=11 and https://www.amazon.co.uk/Yummy-Eats-Dishes-Inspired-Travelling-ebook/dp/B01DFPXFEYAmazon.</p>
+      <h2>Abandoned Container</h2>
+      <div class="o-portfolio__container--divider"></div>
 
- <%= render 'shared/footer' %>
+      <div class="c-portfolio-container">
+        <%= image_tag("abandoned.jpg", alt: "A Ruby logo") %>
+        <div class="c-portfolio-container__text">
+          <p>My first assignment at the University Centre at Wakefield College was to build a website for an inanimate object within 500 metres of my home.</p>
+          <p>The website was based on a shipping container and was the first full website that I have built, it was only a fixed width site but provided me with the basic HTML and CSS skills that I would need in the future.</p>
+          <p>The 3 page website is available to view by click this link.</p>
+        </div>
+      </div>
+
+      <h2>Gnomegeddon</h2>
+      <div class="o-portfolio__container--divider"></div>
+      <div class="c-portfolio-container">
+        <%= image_tag("gnomegeddon.png", alt: "A Ruby logo") %>
+        <div class="c-portfolio-container__text">
+        <p>My final assignment at university was to design, market and build a website for a game called Gnomegeddon made by the game design students at the university centre.</p>
+        <p>This was an improvement on my first website due to it being responsive and including things like a full screen video header, a dropdown navigation menu and it was designed as a single page website due to the amount of content that was available.</p>
+        <p>The website is still available to view here.</p>
+        </div>
+      </div>
+
+      <h2>Yummy Eats Cookbook</h2>
+      <div class="o-portfolio__container--divider"></div>
+
+      <div class="c-portfolio-container">
+        <%= image_tag("yummyeats.png", alt: "A Ruby logo") %>
+        <div class="c-portfolio-container__text">
+          <p>I really wanted to make a cookbook and that is where I learned some design for print skills using Adobe InDesign. The cookbook is called Yummy Eats and contains 50 of my favourite dishes from around the world.</p>
+          <p>All the recipes and photography are by myself apart from some Brazilian dishes that were written by my wife, Thais. Thais was also responsible for the food styling in all my food photography.</p>
+          <p>The book is available as a digital download at iBooks https://itunes.apple.com/gb/book/yummy-eats/id1095148851?mt=11 and https://www.amazon.co.uk/Yummy-Eats-Dishes-Inspired-Travelling-ebook/dp/B01DFPXFEYAmazon.</p>
+        </div>
+      </div>
+
+      <h2>Stock Photography</h2>
+      <div class="o-portfolio__container--divider"></div>
+      <div class="c-portfolio-container">
+        <%= image_tag("chickenskewers.jpeg", alt: "A Ruby logo") %>
+        <div class="c-portfolio-container__text">
+          <p>I have been a photographer since 2011 and my interest in travel led me into food photography.</p>
+          <p>I have a portfolio on Shutterstock of over 3400 images, mainly of food from around the world but there is some travel photography in there too. I also have my portfolio available on other stock photography sites such as iStock and Adobe Stock.</p>
+          <p>Feel free to go have a look by clicking the links, be warned, it may make you hungry.</p>
+        </div>
+      </div>
+</div>
+  </div>
+
+<%= render 'shared/footer' %>
+
+
+
