@@ -15,23 +15,7 @@
       <li><%= link_to "LinkedIn", "https://www.linkedin.com/in/paulbrighton/" %></li>
     </ul>
   </section>
-
-  
-  <section class="contact-form">
-    <h3>Contact Form</h3>
-    <p>Fill in the contact form and I'll get back to you as soon as possible.</p>
-    <form method="post" name="emailform" action="">       
-      <fieldset>
-        <label>Name</label>
-        <input type="text" name="name" placeholder="Not yet in use, sorry." class="contact-form__input--short">
-        <label>Email</label>
-        <input type="email" name="email" placeholder="Not yet in use, sorry." class="contact-form__input--short">
-        <label>Message</label>
-        <textarea name="message" placeholder="Not yet in use, sorry." class="contact-form__input--tall"></textarea>
-        <input type="submit" name="send" value="Send" class="contact-form__btn"/>
-      </fieldset>
-    </form>
-  </section>
+  <%= render 'shared/contact-form' %>
 </div>
 
 <%= render 'shared/footer' %>

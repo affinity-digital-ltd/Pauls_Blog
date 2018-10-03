@@ -6,7 +6,6 @@
   &__header {
     font-size: 2em;
     margin: 20px 0 0;
-    font-weight: 300;
   
     &--divider {
       height: 1px;
@@ -25,12 +24,10 @@
     h3  {
       font-size: 1.9em;
       margin: 25px 0 5px;
-      font-weight: 300;
     }
 
     h4 {
       font-size: 1.4em;
-      font-weight: 300;
       margin: 15px 0 3px;
     }
 
@@ -44,6 +41,7 @@
     }
 
     &-lists {
+
       ul {
         padding: 10px 0 0 25px;
       }

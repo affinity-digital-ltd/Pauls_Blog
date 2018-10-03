@@ -1,10 +1,11 @@
 .c-about {
   width: 100%;
+  font-weight: 300;
 
   &__header {
     font-size: 2em;
     margin: 20px 0 0;
-    font-weight: 300;
+    
   
     &--divider {
       height: 1px;
@@ -13,9 +14,11 @@
     }
   }
 
-  &__text p {
-    font-size: 1.1em;
-    font-weight: 300;
-    margin: 25px 0;
+  &__text {
+  
+    p {
+      font-size: 1.1em;
+      margin: 25px 0;
+    }
   }
 }
