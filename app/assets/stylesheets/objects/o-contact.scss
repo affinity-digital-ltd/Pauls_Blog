@@ -1,4 +1,5 @@
 .o-contact {
+
   &__container {
     min-width: 300px;
     padding: 0 10px;
@@ -21,9 +22,9 @@
   }
 }
 
-
 @media only screen and (min-width: 500px) {
   .o-contact {
+
     &__container {
       width: 480px;
     }
@@ -32,6 +33,7 @@
 
 @media screen and (min-width: 768px) {
   .o-contact {
+
     &__container {
       width: 668px;
     }
@@ -40,6 +42,7 @@
 
 @media screen and (min-width: 960px) {
   .o-contact {
+
     &__container {
       width: 860px;
     }
@@ -48,6 +51,7 @@
 
 @media screen and (min-width: 1024px) {
   .o-contact {
+    
     &__container {
       width: 950px;
     }
