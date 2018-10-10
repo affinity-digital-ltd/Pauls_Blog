@@ -1,18 +1,6 @@
 .c-article {
   width: 100%;
 
-  &__header {
-    font-size: 2em;
-    margin: 20px 0 0;
-    font-weight: 300;
-  
-    &--divider {
-      height: 1px;
-      background-color: #252525;
-      margin: 0 auto 10px;
-    }
-  }
-
   &__author {
     font-size: 1.3em;
   }

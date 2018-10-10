@@ -6,15 +6,15 @@ RSpec.describe "Contact form", type: :feature do
     ActionMailer::Base.deliveries.clear
   end
 
-  describe "contact form error message" do
+  describe "contact form email error" do
 
-    it "should show an error message if contact form is filled in incorrectly" do
+    it "should not send an email" do
       visit(static_pages_contact_path) 
       
 
       fill_in("message[name]", with: nil)
       fill_in("message[email]", with: nil)
-      fill_in("message[name]", with: nil)
+      fill_in("message[body]", with: nil)
       
       click_on("Send")
 
@@ -23,9 +23,9 @@ RSpec.describe "Contact form", type: :feature do
     end
   end
 
-  describe "email confirmation message" do
+  describe "contact form email confirmation" do
 
-    it "should show a confirmation message if form is filled in correctly" do
+    it "should send an email" do
       visit(static_pages_contact_path) 
 
       fill_in("message[name]", with: "name")
@@ -35,22 +35,6 @@ RSpec.describe "Contact form", type: :feature do
       click_on("Send")
 
       expect(page).to have_content "Your message has been sent, I will get back to you soon."
-      expect(ActionMailer::Base.deliveries.size).to eq(1)
-    end
-  end
-
-  describe "email has been sent " do
-
-    it "should add an email to ActionMailer deliveries" do
-      visit(static_pages_contact_path) 
-      
-
-      fill_in("message[name]", with: "name")
-      fill_in("message[email]", with: "paul@paulbrighton.com")
-      fill_in("message[body]", with: "A sample message.")
-      
-      click_on("Send")
-
       expect(ActionMailer::Base.deliveries.size).to eq(1)
     end
   end

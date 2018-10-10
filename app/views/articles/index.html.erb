@@ -6,9 +6,11 @@
       <figure>
         <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "c-intro__img") %>
       </figure>
-      <p class="c-intro__text">Welcome to my blog all about my journey from photographer to web developer. Not only will it cover up to date web development practices but also some useful information on search engine optimization and a little web design.</p>
-      <p class="c-intro__text">I intend to cover all the languages that I have used for my projects and these include HTML, CSS, SASS, JavaScript and Ruby (on Rails).</p>
-      <p class="c-intro__text">There is more information about me and a copy of my latest CV on the About page and also a collection of my projects on the Portfolio page. You can also sign up for email updates by filling in the Subscribe form.</p>
+      <div class="c-intro__text">
+        <p>Welcome to my blog all about my journey from photographer to web developer. Not only will it cover up to date web development practices but also some useful information on search engine optimization and a little web design.</p>
+        <p>I intend to cover all the languages that I have used for my projects and these include HTML, CSS, SASS, JavaScript and Ruby (on Rails).</p>
+        <p>There is more information about me and a copy of my latest CV on the About page and also a collection of my projects on the Portfolio page. You can also sign up for email updates by filling in the Subscribe form.</p>
+      </div>
     </div>
   </section>
   <section class="c-featured">
@@ -16,14 +18,14 @@
       <h2 class="c-featured__header">Featured Article</h2>
       <div class="c-headers__divider--featured"></div>
       <div class="o-article-preview__container--featured">
-        <%= link_to article_path(Article.featured), class: "c-article__path" do %>
+        <%= link_to article_path(@article), class: "c-article__path" do %>
           <div class="c-article-preview__featured">
             <figure>
               <%= image_tag("html.jpg", alt: "An HTML illustration", class: "c-article-preview__image") %>
             </figure>
             <div class="c-article-preview__featured-text">
-              <h3><%= Article.featured.title %></h3>
-              <p><%= Article.featured.text.truncate_words(10) %></p>
+              <h3><%= @article.title %></h3>
+              <p><%= @article.text.truncate_words(10) %></p>
             </div>
           </div>
         <% end %>

@@ -3,7 +3,7 @@
 @import "base_styles/base";
 @import "base_styles/fonts";
 
-// Main Object Styles
+// Main Styles
 @import "objects/o-container";
 @import "objects/o-header";
 @import "objects/o-footer";
@@ -11,6 +11,9 @@
 @import "objects/o-featured";
 @import "objects/o-article-preview";
 @import "objects/o-article";
+@import "objects/o-main-container";
+@import "components/c.header-divider";
+
 
 // Header Styles
 @import "components/c-main-nav";
@@ -39,17 +42,14 @@
 @import "components/c-comments";
 
 // About Page
-@import "objects/o-about";
 @import "objects/o-about-intro";
 @import "components/c-about-cv";
 @import "components/c-about";
 
 // Portfolio Page
-@import "objects/o-portfolio";
 @import "components/c-portfolio-project";
 
 // Contact Page
-@import "objects/o-contact";
 @import "components/c-contact-details";
 @import "components/c-contact-form";
 @import "components/c-email-confirmation";
