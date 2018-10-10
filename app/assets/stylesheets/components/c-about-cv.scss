@@ -1,0 +1,50 @@
+.c-about-cv {
+  width: 100%;
+  font-weight: 300;
+  font-size: 1.1em;
+
+  &__header {
+    font-size: 2em;
+    margin: 20px 0 0;
+  
+    &--divider {
+      height: 1px;
+      background-color: #252525;
+      margin: 0 auto 10px;
+    }
+  }
+
+  &__category {
+    padding-left: 10px;
+
+    &-info {
+      padding-left: 25px;
+    }
+
+    h3  {
+      font-size: 1.9em;
+      margin: 25px 0 5px;
+    }
+
+    h4 {
+      font-size: 1.4em;
+      margin: 15px 0 3px;
+    }
+
+    ul {
+      margin-top: 10px;
+    }
+
+    li {
+      list-style-type: disc;
+      margin: 0 0 5px 20px;
+    }
+
+    &-lists {
+
+      ul {
+        padding: 10px 0 0 25px;
+      }
+    }
+  }
+}

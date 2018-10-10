@@ -1,0 +1,24 @@
+.c-about {
+  width: 100%;
+  font-weight: 300;
+
+  &__header {
+    font-size: 2em;
+    margin: 20px 0 0;
+    
+  
+    &--divider {
+      height: 1px;
+      background-color: #252525;
+      margin: 0 auto 10px;
+    }
+  }
+
+  &__text {
+  
+    p {
+      font-size: 1.1em;
+      margin: 25px 0;
+    }
+  }
+}

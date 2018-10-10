@@ -1,9 +1,7 @@
-<%= render 'shared/header' %>
-
-<article class="o-article__container">
+<article class="o-main-container">
   <div class="c-article">
     <h2 class="c-article__header"><%= @article.title %></h2>
-    <div class="c-article__header--divider"></div>
+    <div class="c-header-divider"></div>
     <h3 class="c-article__author">Article by <%= @article.author %></h3>
     <time class="c-article__published">Published: <%= @article.created_at.strftime("%d-%m-%Y") %></time>
     <figure>
@@ -23,7 +21,4 @@
 </article>
 
 <%= render 'shared/comments' %>
-
-<%= render 'shared/footer' %>
-
 

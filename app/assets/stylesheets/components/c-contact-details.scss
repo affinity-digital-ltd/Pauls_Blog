@@ -1,0 +1,44 @@
+.c-contact-details {
+  width: 100%;
+  padding-bottom: 25px;
+
+  p {
+    font-size: 1.1em;
+    font-weight: 300;
+    margin: 10px 0 25px;
+  }
+
+  h3 {
+    font-size: 1.7em;
+    font-weight: 300;
+  }
+
+  ul { 
+    margin-left: 5px;
+  }
+
+  li {
+    list-style-type: disc;
+    margin: 0 0 10px 15px;
+    font-size: 1.2em;
+  }
+
+  a {
+    text-decoration: none;
+    color: #252525;
+    font-weight: 300;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .c-contact-details {
+    width: 45%;
+    margin-right: 5%;
+    float: left;
+  }
+}
+
