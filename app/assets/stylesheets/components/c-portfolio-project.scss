@@ -1,0 +1,33 @@
+.c-portfolio-project {
+  width: 100%;
+  margin: 0 auto;
+  font-weight: 300;
+
+  img {
+    width: 100%;
+    height: auto;
+    margin: 15px auto 25px;
+  }
+
+  &__text {
+    
+    p {
+      font-size: 1.1em;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__link {
+    color: #FF7315;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+
+

@@ -13,6 +13,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="o-container">
+      <%= render 'shared/header' %>
+      <% flash.each do |name, msg| -%>
+        <% if name == "alert" %>
+          <%= content_tag :div, msg, class: "alert alert-danger" %>
+        <% else %>
+          <%= content_tag :div, msg, class: "c-email-confirmation__banner" %>
+        <% end %>
+      <% end -%>
+      <%= yield %>
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>

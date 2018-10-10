@@ -2,10 +2,7 @@
   <div class="o-footer__container">
     <nav>
       <ul class="c-footer__nav">
-        <li><%= link_to "home", root_path %></li>
-        <li><%= link_to "about", '#' %></li>
-        <li><%= link_to "portfolio", '#' %></li>
-        <li><%= link_to "contact", '#' %></li>
+        <%= render 'shared/nav-list-items' %>
       </ul>
     </nav>
     <div class="c-social">

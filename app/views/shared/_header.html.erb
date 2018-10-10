@@ -17,20 +17,14 @@
       <div data-behavior="myNav" class="c-overlay">
         <a href="javascript:void(0)" class="c-closebtn" onclick="closeNav()">&times;</a>
         <div class="c-overlay-content">
-          <li><%= link_to "home", root_path %></li>
-          <li><%= link_to "about", '#' %></li>
-          <li><%= link_to "portfolio", '#' %></li>
-          <li><%= link_to "contact", '#' %></li>
+          <%= render 'shared/nav-list-items' %>
         </div>
       </div>
       <span class="c-hamburger-nav" onclick="openNav()">&#9776;</span>
     </nav>
     <nav class="c-main-nav">
       <ul>
-        <li><%= link_to "home", root_path %></li>
-        <li><%= link_to "about", '#' %></li>
-        <li><%= link_to "portfolio", '#' %></li>
-        <li><%= link_to "contact", '#' %></li>
+        <%= render 'shared/nav-list-items' %>
       </ul>
     </nav>
   </div>
