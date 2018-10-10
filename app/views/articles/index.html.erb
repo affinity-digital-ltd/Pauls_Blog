@@ -18,14 +18,14 @@
       <h2 class="c-featured__header">Featured Article</h2>
       <div class="c-headers__divider--featured"></div>
       <div class="o-article-preview__container--featured">
-        <%= link_to article_path(@article), class: "c-article__path" do %>
+        <%= link_to article_path(@featured_article), class: "c-article__path" do %>
           <div class="c-article-preview__featured">
             <figure>
               <%= image_tag("html.jpg", alt: "An HTML illustration", class: "c-article-preview__image") %>
             </figure>
             <div class="c-article-preview__featured-text">
-              <h3><%= @article.title %></h3>
-              <p><%= @article.text.truncate_words(10) %></p>
+              <h3><%= @featured_article.title %></h3>
+              <p><%= @featured_article.text.truncate_words(10) %></p>
             </div>
           </div>
         <% end %>

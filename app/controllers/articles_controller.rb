@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.newest
 
-    @article = Article.featured
+    @featured_article = Article.featured
   end
 end
 
