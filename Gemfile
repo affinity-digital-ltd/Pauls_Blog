@@ -20,6 +20,11 @@ gem 'bootstrap', '~> 4.1.3'
 
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 
+gem 'gibbon', '~> 2.2', '>= 2.2.3'
+gem 'sidekiq', '~> 5.0', '>= 5.0.5'
+gem 'redis', '~> 3.3', '>= 3.3.1'
+gem 'webmock', '~> 2.1'
+
 gem 'jquery-rails'
 
 # Use CoffeeScript for .coffee assets and views
