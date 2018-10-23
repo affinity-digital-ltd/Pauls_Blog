@@ -34,3 +34,5 @@
 
 # Ignore test files.
 /spec/examples.txt
+
+/dump.rdb
