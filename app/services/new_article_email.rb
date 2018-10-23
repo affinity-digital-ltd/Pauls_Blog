@@ -12,7 +12,7 @@ class NewArticleEmail
     new.call
   end 
 
-  def call 
+  def call
     begin
       campaign = gibbon.campaigns.create(body: body)
       campaign_id = campaign.fetch(:id)
