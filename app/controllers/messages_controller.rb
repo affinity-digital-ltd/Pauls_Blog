@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.valid?
-      MessageMailer.contact(@message).deliver_now
+      MessageMailerServiceJob.perform_async(Message.new(message_params).to_json)
 
       redirect_to static_pages_contact_path, notice: "Your message has been sent, I will get back to you soon."
     else
