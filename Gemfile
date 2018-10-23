@@ -6,7 +6,7 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 
-gem 'pg'
+gem 'pg', '~> 1.1', '>= 1.1.3'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -20,7 +20,12 @@ gem 'bootstrap', '~> 4.1.3'
 
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 
-gem 'jquery-rails'
+gem 'gibbon', '~> 2.2', '>= 2.2.3'
+gem 'sidekiq', '~> 5.0', '>= 5.0.5'
+gem 'redis', '~> 3.3', '>= 3.3.1'
+
+
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -45,10 +50,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'database_cleaner'
-  gem 'rspec-rails'
+  gem 'database_cleaner', '~> 1.7'
+  gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails', '~> 4.11'
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', '~> 2.5'
 end
 
 group :development do
@@ -57,18 +62,20 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'foreman', '~> 0.85.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'spring', '~> 2.0', '>= 2.0.2'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '~> 3.14', '>= 3.14.1'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
-  gem 'capybara-screenshot'
+  gem 'chromedriver-helper', '~> 2.1'
+  gem 'capybara-screenshot', '~> 1.0', '>= 1.0.22'
   gem 'faker', '~> 1.9', '>= 1.9.1'
+  gem 'webmock', '~> 2.1'
+  gem 'rspec-sidekiq', '~> 3.0', '>= 3.0.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
