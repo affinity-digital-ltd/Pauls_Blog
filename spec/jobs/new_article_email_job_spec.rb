@@ -7,7 +7,7 @@ RSpec.describe NewArticleEmailJob, type: :worker do
     end
 
     it "should queue a worker when an article is created" do
-      NewArticleEmail.call
+      NewArticleEmailJob.perform_async
       expect(NewArticleEmail).to have_received(:call)
     end
   end
