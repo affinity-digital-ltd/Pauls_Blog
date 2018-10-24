@@ -13,4 +13,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :messages, only: :create
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
 end
