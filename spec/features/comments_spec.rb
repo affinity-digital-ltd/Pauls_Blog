@@ -1,18 +1,8 @@
 require 'rails_helper'
+require 'support/factory_bot'
 include AuthHelper
 
 RSpec.describe "Article comments", type: :feature do
-  describe "comments form" do
-    let!(:article) { create(:article) }
-
-    it "should show user comment form on page" do
-      visit article_path(article)
-
-      expect(page).to have_content "Name"
-      expect(page).to have_content "Comment"
-      expect(page).to have_content "Post"
-    end
-  end
 
   describe "adding a comment" do
     let!(:article) { create(:article) }
@@ -30,25 +20,27 @@ RSpec.describe "Article comments", type: :feature do
     end
   end
 
-  describe "comment counter" do
+  describe "adding a comment" do
     let!(:article) { create(:article) }
 
-    it "should add two comments to counter" do
+    it "should add a user comment" do
       visit article_path(article)
 
-      fill_in("comment[author_name]", with: "User name")
-      fill_in("comment[body]", with: "A users comment")
+      fill_in("comment[author_name]", with: "")
+      fill_in("comment[body]", with: "")
       
       click_on("Post")
-
-      expect(page).to have_content "1 comment"
-
-      fill_in("comment[author_name]", with: "Another name")
-      fill_in("comment[body]", with: "Another user comment")
       
-      click_on("Post")
+      expect(page).to have_content "Author name can't be blank"
+      expect(page).to have_content "Body can't be blank"
+    end
+  end
 
-      expect(page).to have_content "2 comments"
+  describe "comment counter" do
+    
+    it "should add three comments to counter" do
+      
+    expect { create(:article, :with_comments) }.to change(Comment, :count).by(3)
     end
   end
 end
