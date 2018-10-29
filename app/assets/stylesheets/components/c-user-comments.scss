@@ -1,0 +1,57 @@
+.c-user-comments {
+  font-weight: 300;
+  width: 100%;
+
+  &__header {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.6em;
+    margin-bottom: 25px;
+  }
+
+  &__info {
+    display: inline;
+    vertical-align: middle;
+  }
+
+  &__counter {
+    float: left;
+    font-size: 1.4em;
+    font-weight: 500;
+  }
+
+  &__login-btn {
+    float: right;
+    color: #f2f2f2;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    background-color: #5A5A5A;
+    padding: 6px 15px 5px;
+    border: 0.5px solid #252525; 
+    border-radius: 5px;
+    outline: none;
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #252525;
+    }
+  }
+
+  &__comments-header {
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+
+  &__back-btn {
+    text-decoration: none;
+    color: #252525;
+    font-weight: 500;
+    font-size: 1.1em;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

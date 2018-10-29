@@ -1,8 +1,8 @@
 class ArticlesController < ApplicationController
   def show
-    @article = Article.find(params[:id])
+    @article = Article.includes(:comments).find(params[:id])
     
-    @comment = @article.comments.build
+    @comment = Comment.new
   end
 
   def index
