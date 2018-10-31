@@ -37,10 +37,17 @@ RSpec.describe "Article comments", type: :feature do
   end
 
   describe "comment counter" do
+    let(:count) { rand(10) }
+    let!(:article) { create(:article, :with_comments, comments: count) }
     
     it "should add three comments to counter" do
-      
-    expect { create(:article, :with_comments) }.to change(Comment, :count).by(3)
+      visit article_path(article)
+
+      if count == 1
+        expect(page).to have_content "#{article.comments.count} comment"
+      else
+        expect(page).to have_content "#{article.comments.count} comments"
+      end
     end
   end
 end
