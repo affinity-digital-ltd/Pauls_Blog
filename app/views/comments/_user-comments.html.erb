@@ -1,0 +1,48 @@
+<div class="c-user-comments">
+  <h2 class="c-article__header">Post a comment!</h2>
+  <div class="c-header-divider"></div>
+  <%# <h3 class="c-user-comments__header">Post a comment!</h3> %>
+  <div class="c-user-comments__info">
+
+<%
+=begin %>
+  <% if current_user %>
+    Logged in as <%= current_user.email %>.
+  <% else %>
+    <%= link_to "Login", new_session_path, class: "c-user-comments__login-btn" %>
+  <% end %>
+
+
+ 
+    <% if logged_in? %>
+      <%# <%= button_tag "Login", type: "button", class: "c-user-comments__login-btn" %> 
+      <%= button_tag "Login", type: "button", class: "c-user-comments__login-btn", style: "display: none" %>
+      <%# <p>You need to be logged in to comment.</p> %>
+      <%= render 'shared/comment-form' %>
+    <% else %> 
+      <%# <%= button_tag "Login", type: "button", class: "c-user-comments__login-btn", style: "display: none" %> 
+      <%= button_tag "Login", type: "button", class: "c-user-comments__login-btn" %>
+      <%# <%= render 'shared/comment-form' %> 
+      <p class="c-user-comments__login-message">Please log in to comment.</p>
+    <% end %>
+ 
+    <% if logged_in? %>
+      <%# <%= button_tag "Login", type: "button", class: "c-user-comments__login-btn", style: "display: none" %> 
+      <%= button_tag "Login", type: "button", class: "c-user-comments__login-btn" %>
+      <%# <%= render 'shared/comment-form' %> 
+      <p class="c-user-comments__login-message">Please log in to comment.</p>
+    <% else %> 
+      <%# <%= button_tag "Login", type: "button", class: "c-user-comments__login-btn" %> 
+      <%= button_tag "Login", type: "button", class: "c-user-comments__login-btn", style: "display: none" %>
+      <%= button_tag "Logout", type: "button", class: "c-user-comments__login-btn" %>
+      <%# <p>You need to be logged in to comment.</p> %>
+      <%= render 'comments/form' %>
+    <% end %>
+  </div>
+<%
+=end %>
+  <%= render partial: 'comments/form' %> 
+  <%# <h3 class="c-user-comments__comments-header">Latest Comments</h3> %>
+  <h4  class="c-user-comments__counter"><%= pluralize(@article.comments.count, 'comment') %></h4 >
+  <%= render partial: 'comments/comment', collection: @article.comments %>
+</div>
