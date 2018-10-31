@@ -4,6 +4,8 @@
   <%# <h3 class="c-user-comments__header">Post a comment!</h3> %>
   <div class="c-user-comments__info">
 
+<%
+=begin %>
   <% if current_user %>
     Logged in as <%= current_user.email %>.
   <% else %>
@@ -11,8 +13,7 @@
   <% end %>
 
 
- <%
-=begin %>
+ 
     <% if logged_in? %>
       <%# <%= button_tag "Login", type: "button", class: "c-user-comments__login-btn" %> 
       <%= button_tag "Login", type: "button", class: "c-user-comments__login-btn", style: "display: none" %>
