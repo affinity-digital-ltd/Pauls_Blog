@@ -25,8 +25,7 @@
       <%# <%= render 'shared/comment-form' %> 
       <p class="c-user-comments__login-message">Please log in to comment.</p>
     <% end %>
- <%
-=end %>
+ 
     <% if logged_in? %>
       <%# <%= button_tag "Login", type: "button", class: "c-user-comments__login-btn", style: "display: none" %> 
       <%= button_tag "Login", type: "button", class: "c-user-comments__login-btn" %>
@@ -40,8 +39,9 @@
       <%= render 'comments/form' %>
     <% end %>
   </div>
-
-  <%# <%= render partial: 'shared/comment-form' %> 
+<%
+=end %>
+  <%= render partial: 'comments/form' %> 
   <%# <h3 class="c-user-comments__comments-header">Latest Comments</h3> %>
   <h4  class="c-user-comments__counter"><%= pluralize(@article.comments.count, 'comment') %></h4 >
   <%= render partial: 'comments/comment', collection: @article.comments %>
