@@ -11,20 +11,8 @@ RSpec.describe "articles and home page", type: :feature do
       
       expect(page).to have_content(article.title)
       expect(page).to have_content(article.author)
-      expect(page).to have_content(article.created_at.strftime("%d-%m-%Y"))
+      expect(page).to have_content(article.created_at.strftime("%b %e %Y"))
       expect(page).to have_content(article.text)
-    end
-  end
-
-  describe "viewing disqus comments", js: true do
-    let!(:article) { create(:article) }
-
-    it "should show the disqus comments" do
-      visit article_path(article)
-
-      within '#disqus_thread' do
-        expect(page).to have_xpath '//iframe'
-      end
     end
   end
 
@@ -38,5 +26,4 @@ RSpec.describe "articles and home page", type: :feature do
       expect(page).to have_content(article.title)
     end
   end
-  
 end

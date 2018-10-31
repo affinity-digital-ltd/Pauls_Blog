@@ -1,0 +1,29 @@
+.c-comment {
+
+  &__author {
+    border-top: 1px #c9c9c9 solid;
+    border-bottom: 1px #c9c9c9 solid;
+    padding: 5px 0 5px;
+  
+    &-name {
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+  }
+
+  &__img {
+    width: 50px;
+    height: auto;
+    float: left;
+    margin-right: 5px;
+  }
+
+  &__created-date {
+    display: block;
+    font-size: 0.9em;
+  }
+
+  &__body {
+    margin: 15px 0 40px;
+  }
+}
