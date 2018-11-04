@@ -3,7 +3,7 @@ module LogoutHelper
     domain = Rails.application.secrets.auth0_domain
     client_id = Rails.application.secrets.auth0_client_id
     request_params = {
-      returnTo: 'http://localhost:3000',
+      returnTo: 'https://pauls-blog.herokuapp.com/',
       client_id: client_id
     }
 
