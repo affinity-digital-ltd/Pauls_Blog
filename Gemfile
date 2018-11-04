@@ -17,6 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 gem 'bootstrap', '~> 4.1.3'
+gem "loofah", ">= 2.2.3"
 
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 
