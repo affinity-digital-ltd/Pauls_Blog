@@ -3,12 +3,9 @@ require 'support/factory_bot'
 include AuthHelper
 
 RSpec.describe "Article comments", type: :feature do
-<<<<<<< HEAD
   before do
     page.set_rack_session(userinfo: { "info" => { "name" => "Paul"}})
   end
-=======
->>>>>>> develop
 
   describe "adding a comment" do
     let!(:article) { create(:article) }
