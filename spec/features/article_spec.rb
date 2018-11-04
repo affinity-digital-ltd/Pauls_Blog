@@ -11,7 +11,7 @@ RSpec.describe "articles and home page", type: :feature do
       
       expect(page).to have_content(article.title)
       expect(page).to have_content(article.author)
-      expect(page).to have_content(article.created_at.strftime("%b %e %Y"))
+      expect(page).to have_content(article.created_at.strftime("%b %-d %Y"))
       expect(page).to have_content(article.text)
     end
   end
