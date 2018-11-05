@@ -2,11 +2,13 @@ require 'rails_helper'
 require 'support/factory_bot'
 include AuthHelper
 
+
 RSpec.describe "Article comments", type: :feature do
+  include LoginUser
 
   describe "adding a comment" do
     before do
-      page.set_rack_session(userinfo: { "info" => { "name" => "Paul"}})
+      log_in
     end
 
     let!(:article) { create(:article) }
@@ -26,7 +28,7 @@ RSpec.describe "Article comments", type: :feature do
 
   describe "adding a comment with incorrect details" do
     before do
-      page.set_rack_session(userinfo: { "info" => { "name" => "Paul"}})
+      log_in
     end
 
     let!(:article) { create(:article) }
@@ -60,7 +62,7 @@ RSpec.describe "Article comments", type: :feature do
 
   describe "comment counter" do
     before do
-      page.set_rack_session(userinfo: { "info" => { "name" => "Paul"}})
+      log_in
     end
 
     let(:count) { rand(10) }
