@@ -20,5 +20,4 @@ Rails.application.routes.draw do
   get 'auth/oauth2/callback' => 'auth0#callback'
   get 'auth/failure' => 'auth0#failure'
   get 'auth/logout' => 'auth0#logout'
-  delete 'auth/destroy'  => 'auth0#destroy'
 end

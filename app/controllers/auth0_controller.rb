@@ -11,6 +11,6 @@ class Auth0Controller < ApplicationController
 
   def logout
     session[:userinfo] = nil
-    redirect_to "https://pauls-blog.eu.auth0.com/v2/logout?returnTo=#{ENV.fetch('LOGOUT_URL')}&#{ENV.fetch('ClIENT_ID')}"
+    redirect_to "https://pauls-blog.eu.auth0.com/v2/logout?returnTo=#{ENV.fetch('LOGOUT_URL')}&#{ENV.fetch('CLIENT_ID')}"
   end
 end

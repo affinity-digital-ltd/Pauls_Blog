@@ -3,11 +3,12 @@ require 'support/factory_bot'
 include AuthHelper
 
 RSpec.describe "Article comments", type: :feature do
-  before do
-    page.set_rack_session(userinfo: { "info" => { "name" => "Paul"}})
-  end
 
   describe "adding a comment" do
+    before do
+      page.set_rack_session(userinfo: { "info" => { "name" => "Paul"}})
+    end
+
     let!(:article) { create(:article) }
 
     it "should add a user comment" do
@@ -23,10 +24,14 @@ RSpec.describe "Article comments", type: :feature do
     end
   end
 
-  describe "adding a comment" do
+  describe "adding a comment with incorrect details" do
+    before do
+      page.set_rack_session(userinfo: { "info" => { "name" => "Paul"}})
+    end
+
     let!(:article) { create(:article) }
 
-    it "should add a user comment" do
+    it "should prompt the user to use the correct details" do
       visit article_path(article)
 
       fill_in("comment[author_name]", with: "")
@@ -39,11 +44,29 @@ RSpec.describe "Article comments", type: :feature do
     end
   end
 
+  describe "inaccessible comment form" do
+    let!(:article) { create(:article) }
+
+    it "should not let a user access comment form" do
+      visit article_path(article)
+
+      expect(page).to have_no_content("Logout")
+      expect(page).to have_no_content("Add your comment here")
+      
+      expect(page).to have_content "Please login to comment."
+      expect(page).to have_content "Login"
+    end
+  end
+
   describe "comment counter" do
+    before do
+      page.set_rack_session(userinfo: { "info" => { "name" => "Paul"}})
+    end
+
     let(:count) { rand(10) }
     let!(:article) { create(:article, :with_comments, comments: count) }
     
-    it "should add three comments to counter" do
+    it "should add the number of comments to counter" do
       visit article_path(article)
 
       if count == 1
