@@ -17,12 +17,15 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 gem 'bootstrap', '~> 4.1.3'
+gem "loofah", ">= 2.2.3"
 
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 
 gem 'gibbon', '~> 2.2', '>= 2.2.3'
 gem 'sidekiq', '~> 5.0', '>= 5.0.5'
 gem 'redis', '~> 3.3', '>= 3.3.1'
+gem 'omniauth', '~> 1.6.1'
+gem 'omniauth-auth0', '~> 2.0.0'
 
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
@@ -76,6 +79,7 @@ group :test do
   gem 'faker', '~> 1.9', '>= 1.9.1'
   gem 'webmock', '~> 2.1'
   gem 'rspec-sidekiq', '~> 3.0', '>= 3.0.3'
+  gem 'rack_session_access', '~> 0.1.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
