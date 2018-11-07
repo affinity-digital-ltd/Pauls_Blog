@@ -26,6 +26,7 @@ gem 'sidekiq', '~> 5.0', '>= 5.0.5'
 gem 'redis', '~> 3.3', '>= 3.3.1'
 gem 'omniauth', '~> 1.6.1'
 gem 'omniauth-auth0', '~> 2.0.0'
+gem "aws-sdk-s3", require: false
 
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
