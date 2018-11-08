@@ -6,6 +6,7 @@
     <time class="c-article__published">Published: <%= @article.created_at.strftime("%b %-d %Y") %></time>
     <figure>
       <%= image_tag("welcome_image.jpg", alt: "An HTML illustration", class: "c-article__image") %>
+      <%# <img class="c-article__image" src= "<%= rails_blob_path(@article.image) %>"> %>
     </figure>
     <div class="c-article__text">
       <p><%= markdown(@article.text) %></p>
