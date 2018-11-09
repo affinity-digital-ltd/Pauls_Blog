@@ -10,10 +10,6 @@
       <%= f.text_area :body, required: :true, placeholder: :"Add your comment here", class: "c-comments-form__body-text" %>
     </div>
     <div>
-    <%= f.label :image, "Choose an Avatar Image", class: "c-comments-form__body-label" %>
-    <%= f.file_field :image, direct_upload: true %>
-  </div>
-    <div>
       <%= f.submit 'Post', class: "c-comments-form__submit-btn" %>
     </div>
   <% end %>

@@ -9,7 +9,7 @@ class Admin::ArticlesController < Admin::ApplicationController
     @article = Article.new(article_params)
     @article.image.attach(article_params[:image])
     
-    if @article.save(article_params)
+    if @article.save
       redirect_to admin_articles_path, notice: "You successfully created a post."
     else
       flash[:alert] = "All fields are required."

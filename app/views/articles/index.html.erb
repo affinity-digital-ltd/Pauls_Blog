@@ -21,7 +21,7 @@
         <%= link_to article_path(@featured_article), class: "c-article__path" do %>
           <div class="c-article-preview__featured">
             <figure>
-              <%= image_tag("html.jpg", alt: "An HTML illustration", class: "c-article-preview__image") %>
+              <img class="c-article-preview__image" src="<%= rails_blob_path(@featured_article.image) %>">
             </figure>
             <div class="c-article-preview__featured-text">
               <h3><%= @featured_article.title %></h3>
@@ -41,7 +41,7 @@
           <%= link_to article_path(article), class: "c-article__path" do %>
           <div class="c-article-preview">
             <figure>
-              <%= image_tag("mac_user.jpg", alt: "A mobile phone in a hand", class: "c-article-preview__image") %>
+              <img class="c-article-preview__image" src="<%= rails_blob_path(article.image) %>">
             </figure>
             <div class="c-article-preview__text">
               <h3><%= article.title %></h3>

@@ -10,6 +10,12 @@ class Article < ApplicationRecord
 
   scope :featured, -> { newest.first }
   scope :newest, -> { order(created_at: :desc) }
+
+  private
+
+  def new_post_email
+    NewArticleEmailJob.perform_async
+  end
 end
 
 
