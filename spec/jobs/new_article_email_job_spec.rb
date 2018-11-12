@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe NewArticleEmailJob, type: :worker do
+RSpec.describe NewArticleEmailJob do
   describe "sending a campaign email", sidekiq: :inline do
     before do
       allow(NewArticleEmail).to receive(:call)
