@@ -13,6 +13,8 @@ RSpec.describe "articles and home page", type: :feature do
       expect(page).to have_content(article.author)
       expect(page).to have_content(article.created_at.strftime("%b %-d %Y"))
       expect(page).to have_content(article.text)
+      expect(article.image).to be_attached
+      expect(article.image.filename).to eq 'mobile.jpg'
     end
   end
 

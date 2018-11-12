@@ -7,8 +7,9 @@ class Admin::ArticlesController < Admin::ApplicationController
 
   def create
     @article = Article.new(article_params)
-
-    if @article.save(article_params)
+    @article.image.attach(article_params[:image])
+    
+    if @article.save
       redirect_to admin_articles_path, notice: "You successfully created a post."
     else
       flash[:alert] = "All fields are required."
@@ -41,7 +42,7 @@ class Admin::ArticlesController < Admin::ApplicationController
 
   private 
   def article_params 
-    params.require(:article).permit(:title, :author, :text)
+    params.require(:article).permit(:title, :author, :text, :image)
   end
 end
 
