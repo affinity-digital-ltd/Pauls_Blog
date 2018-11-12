@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe NewCommentEmailJob, type: :worker do
+RSpec.describe NewCommentEmailJob do
   describe "new comment notification email" do
     before do
       allow(NewCommentEmail).to receive(:call)
