@@ -28,6 +28,8 @@ gem 'omniauth', '~> 1.6.1'
 gem 'omniauth-auth0', '~> 2.0.0'
 
 gem "aws-sdk-s3", require: false
+gem 'memcachier', '~> 0.0.2'
+gem 'dalli', '~> 2.7', '>= 2.7.6'
 
 
 
