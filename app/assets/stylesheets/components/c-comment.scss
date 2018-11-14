@@ -1,9 +1,12 @@
 .c-comment {
+  p {
+    margin-bottom: 15px;
+  }
 
   &__author {
     border-top: 1px #c9c9c9 solid;
     border-bottom: 1px #c9c9c9 solid;
-    padding: 5px 0 5px;
+    padding: 5px 0 10px;
   
     &-name {
       font-size: 1.1em;
@@ -16,14 +19,11 @@
     height: auto;
     float: left;
     margin-right: 5px;
+    border-radius: 50px;
   }
 
   &__created-date {
     display: block;
     font-size: 0.9em;
-  }
-
-  &__body {
-    margin: 15px 0 40px;
   }
 }
