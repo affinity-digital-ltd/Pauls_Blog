@@ -130,10 +130,6 @@ GEM
     hashdiff (0.3.7)
     hashie (3.5.7)
     i18n (1.1.1)
-<<<<<<< HEAD
-=======
-
->>>>>>> 338b619194155cfdfb9ce82643088003836bda5a
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
     jbuilder (2.8.0)
