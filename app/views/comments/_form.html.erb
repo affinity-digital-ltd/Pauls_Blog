@@ -10,6 +10,9 @@
       <%= f.text_area :body, required: :true, placeholder: :"Add your comment here", class: "c-comments-form__body-text" %>
     </div>
     <div>
+      <%= f.hidden_field :image, value: user["info"]["image"] %>
+    </div>
+    <div>
       <%= f.submit 'Post', class: "c-comments-form__submit-btn" %>
     </div>
   <% end %>

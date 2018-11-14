@@ -1,8 +1,8 @@
 <div class="c-comment">
   <div class="c-comment__author">
-    <%= image_tag("iMe.png",  alt: "Paul Brighton logo", class: "c-comment__img") %>
+    <img class="c-comment__img" src="<%= comment.image %>"/>
     <h4 class="c-comment__author-name">Comment by <%= comment.author_name %></h4>
     <time class="c-comment__created-date">Created on: <%= comment.created_at.strftime("%b %e %Y") %></time>
   </div>
-  <p class="c-comment__body"><%= comment.body %></p>
+  <p class="c-comment__body"><%= markdown(comment.body) %></p>
 </div>

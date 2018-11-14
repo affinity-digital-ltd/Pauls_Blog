@@ -26,6 +26,26 @@ RSpec.describe "Article comments", type: :feature do
     end
   end
 
+  describe "adding a comment with markdown" do
+    before do
+      log_in
+    end
+
+    let!(:article) { create(:article) }
+
+    it "should add a markdown formatted comment" do
+      visit article_path(article)
+
+      fill_in("comment[author_name]", with: "User name")
+      fill_in("comment[body]", with: "##### Hello")
+      
+      click_on("Post")
+
+      expect(page).to have_content "User name"
+      expect(page).to have_selector('h5', text: 'Hello')
+    end
+  end
+
   describe "adding a comment with incorrect details" do
     before do
       log_in
