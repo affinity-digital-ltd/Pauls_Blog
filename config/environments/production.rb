@@ -59,7 +59,7 @@ Rails.application.configure do
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
-  config.cache_store = :dalli_store, nil, { :namespace => Pauls_Blog, :expires_in => 1.day, :compress => true }
+  config.cache_store = :dalli_store, nil, { :namespace => PaulsBlog, :expires_in => 1.day, :compress => true }
 
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
