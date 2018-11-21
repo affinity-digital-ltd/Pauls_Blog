@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   post "/graphql", to: "graphql#execute"
   
   root 'articles#index'
-  get 'static_pages/about'
-  get 'static_pages/portfolio'
-  get 'static_pages/contact'
+  get 'about', to: 'static_pages#about'
+  get 'portfolio', to: 'static_pages#portfolio'
+  get 'contact', to: 'static_pages#contact'
   
   namespace :admin do
     root 'articles#index'
