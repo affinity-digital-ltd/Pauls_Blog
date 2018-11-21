@@ -6,7 +6,7 @@ RSpec.describe "static pages", type: :feature do
   describe "about page content" do
 
     it "should show content on about page" do
-      visit(static_pages_about_path)
+      visit(about_path)
 
       expect(page).to have_text 'About'
       expect(page).to have_text 'CV'
@@ -16,7 +16,7 @@ RSpec.describe "static pages", type: :feature do
   describe "portfolio page content" do
 
     it "should show content on portfolio page" do
-      visit(static_pages_portfolio_path)
+      visit(portfolio_path)
 
       expect(page).to have_text 'Portfolio'
     end
@@ -25,7 +25,7 @@ RSpec.describe "static pages", type: :feature do
   describe "contact page content" do
 
     it "should have content and links on contact page" do
-      visit(static_pages_contact_path)
+      visit(contact_path)
 
       expect(page).to have_text 'Contact'
       expect(page).to have_link href: 'https://twitter.com/paulbrighton_'
@@ -39,7 +39,7 @@ RSpec.describe "static pages", type: :feature do
     
     describe "with incorrect details" do
       it "should not send an email" do
-        visit(static_pages_contact_path) 
+        visit(contact_path) 
         
   
         fill_in("message[name]", with: nil)
@@ -56,7 +56,7 @@ RSpec.describe "static pages", type: :feature do
     describe "with correct details" do
 
       it "should send an email" do
-        visit(static_pages_contact_path) 
+        visit(contact_path) 
   
         fill_in("message[name]", with: "name")
         fill_in("message[email]", with: "paul@paulbrighton.com")
