@@ -1,6 +1,6 @@
 module Types
   class CommentType < GraphQL::Schema::Object
-    description "An article"
+    description "A comment"
     field :id, ID, null: false
     field :author_name, String, null: false
     field :body, String, null: false
