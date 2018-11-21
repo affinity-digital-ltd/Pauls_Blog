@@ -36,6 +36,7 @@ gem 'graphql', '~> 1.8', '>= 1.8.2'
 
 
 
+
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 # Use CoffeeScript for .coffee assets and views
