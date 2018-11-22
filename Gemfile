@@ -33,6 +33,7 @@ gem 'dalli', '~> 2.7', '>= 2.7.6'
 gem 'rouge', '~> 3.3'
 
 gem 'graphql', '~> 1.8', '>= 1.8.2'
+gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 
 
 

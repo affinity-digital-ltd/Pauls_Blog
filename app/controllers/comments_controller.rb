@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @article = Article.find(params[:article_id])
+    @article = Article.friendly.find(params[:article_id])
     @comment = @article.comments.build(comment_params)
   
     if @comment.save
