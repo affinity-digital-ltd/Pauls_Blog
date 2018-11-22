@@ -1,4 +1,7 @@
 class Article < ApplicationRecord
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   has_many :comments, dependent: :delete_all
   has_one_attached :image
 

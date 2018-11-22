@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
     if @message.valid?
       MessageMailerServiceJob.perform_async(Message.new(message_params).to_json)
 
-      redirect_to static_pages_contact_path, notice: "Your message has been sent, I will get back to you soon."
+      redirect_to contact_path, notice: "Your message has been sent, I will get back to you soon."
     else
       render :new
     end
