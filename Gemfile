@@ -38,6 +38,7 @@ gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 
 
 
+
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 # Use CoffeeScript for .coffee assets and views
