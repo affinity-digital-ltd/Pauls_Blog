@@ -2,7 +2,8 @@ class ArticlesController < ApplicationController
   after_action :set_return_url, only: :show
 
   def show
-    @article = Article.friendly.includes(:comments).friendly.find(params[:id])
+    @article = Article.includes(:comments).friendly.find(params[:id])
+
     
     @comment = Comment.new
   end
