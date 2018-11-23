@@ -25,7 +25,6 @@
             </figure>
             <div class="c-article-preview__featured-text">
               <h3><%= @featured_article.title %></h3>
-              <p><%= @featured_article.text.truncate_words(10) %></p>
             </div>
           </div>
         <% end %>
@@ -45,13 +44,11 @@
             </figure>
             <div class="c-article-preview__text">
               <h3><%= article.title %></h3>
-              <p><%= article.text.truncate_words(10) %></p>
             </div>
           </div>
           <% end %>
         <% end %>
       </div>
-      <p class="c-load-btn"><%= link_to "Load More..." %></p>
     </div>
   </section>
 </main>

@@ -10,13 +10,6 @@
     <div class="c-article__text">
       <p><%= markdown(@article.text) %></p>
     </div>
-    <h4 class="c-category">Categories:</h4>
-    <div class="category__buttons">
-      <%= button_tag "HTML", type: "button", class: "c-category__btn" %>
-      <%= button_tag "CSS", type: "button", class: "c-category__btn" %>
-      <%= button_tag "JavaScript", type: "button", class: "c-category__btn" %>
-      <%= button_tag "Ruby", type: "button", class: "c-category__btn" %>
-    </div>
   </div>
   <%= render 'comments/user-comments' %>
   <%= link_to 'Back to Article List', articles_path, class: "c-user-comments__back-btn" %>
