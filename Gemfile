@@ -34,6 +34,7 @@ gem 'rouge', '~> 3.3'
 
 gem 'graphql', '~> 1.8', '>= 1.8.2'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
+gem 'wisper', '~> 2.0'
 
 
 
@@ -91,6 +92,7 @@ group :test do
   gem 'webmock', '~> 2.1'
   gem 'rspec-sidekiq', '~> 3.0', '>= 3.0.3'
   gem 'rack_session_access', '~> 0.1.1'
+  gem 'wisper-rspec', '~> 1.0', '>= 1.0.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

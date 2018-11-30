@@ -1,4 +1,6 @@
 class Comment < ApplicationRecord
+  include Wisper::Publisher
+
   validates :body, :author_name, presence: true
   belongs_to :article
 
@@ -7,6 +9,6 @@ class Comment < ApplicationRecord
   private
 
   def comment_email
-    NewCommentEmailJob.perform_async(self.article.id)
+    broadcast(:new_comment_email, self.article.id)
   end
 end
