@@ -98,12 +98,4 @@ RSpec.describe "Article comments", type: :feature do
       end
     end
   end
-
-  describe 'new comment email' do
-    let(:article) { create(:article) }
-
-    it 'should queue a new comment email' do
-      expect { create(:comment, article: article) }.to change(NewCommentEmailJob.jobs, :size).by(1)
-    end
-  end
 end
