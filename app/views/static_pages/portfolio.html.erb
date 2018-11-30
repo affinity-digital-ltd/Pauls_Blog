@@ -19,7 +19,7 @@
     <div class="c-portfolio-project__text">
       <p>After completing the HTML and CSS part of the ProCoders course, I moved on to learning JavaScript and my first project was to build a Rock, Paper, Scissors game.</p>
       <p>This includes clickable images and a score board that updates and lets the player know whether they have won the game or lost to the computer, it will then ask the player if they want to play again.</p>
-      <p>Interested? You can play the game by clicking <%= link_to "here", 'http://paulbrighton.com/rock-paper-scissors/', class: "c-portfolio-project__link" %> or on the image above.</p>
+      <p>Interested? You can play the <%= link_to "Rock, Paper, Scissors game using this link", 'http://paulbrighton.com/rock-paper-scissors/', class: "c-portfolio-project__link" %> or clicking on the image above.</p>
     </div>
   </div>
 
@@ -30,7 +30,7 @@
     <div class="c-portfolio-project__text">
       <p>My second challenge was to use DOM manipulation to make a digital version of the popular Etch-A-Sketch toy. </p>
       <p>It uses many divs on the screen that can be filled in with a different colour in order to let the user create images with the mouse. It also gives the user the option to change the thickness of the line they want to use to draw their pictures.</p>
-      <p>Click <%= link_to "here", 'https://codepen.io/paulbrighton/pen/rqOGYK', class: "c-portfolio-project__link" %> to view code on CodePen.</p>
+      <p>Get arty with the <%= link_to "Etch-a-Sketch toy", 'https://codepen.io/paulbrighton/pen/rqOGYK', class: "c-portfolio-project__link" %> and view the code on CodePen.</p>
     </div>
   </div>
 
@@ -41,7 +41,7 @@
     <div class="c-portfolio-project__text">
       <p>My final challenge was to create a simple calculator using CSS, HTML and JavaScript. The calculator allows you to add, subtract, divide and multiply numbers by clicking the buttons with a mouse.</p>
       <p>When styling the calculator, I used CSS Grid to layout the buttons, something I had not used before but is a very useful tool for laying out pages in CSS.</p>
-      <p>Need to do some sums, use my calculator online at <%= link_to "CodePen", 'https://codepen.io/paulbrighton/pen/VEvMRL', class: "c-portfolio-project__link" %>.</p>
+      <p>Need to do some sums, use my <%= link_to "JavaScript calculator", 'https://codepen.io/paulbrighton/pen/VEvMRL', class: "c-portfolio-project__link" %> online on the CodePen website.</p>
     </div>
   </div>
 
@@ -52,18 +52,7 @@
     <div class="c-portfolio-project__text">
       <p>I have to admit, I did use an online tutorial that can be viewed here to build the Android logo, but it was good experience as it was more complex than anything I had done before with CSS. If there’s one way to get better at CSS, it’s practice, practice, practice. </p>
       <p>It uses CSS transform to allow the head and arms to move when the mouse cursor is hovered over.</p>
-      <p>Check it out now on <%= link_to "CodePen", 'https://codepen.io/paulbrighton/pen/XxmzJG', class: "c-portfolio-project__link" %>.</p>
-    </div>
-  </div>
-
-  <h2>Abandoned Container</h2>
-  <div class="c-header-divider"></div>
-  <div class="c-portfolio-project">
-    <%= link_to image_tag("container.jpg",  alt: "A shipping container", class: "c-portfolio-project__img"), "http://paulbrighton.com/fed/" %>
-    <div class="c-portfolio-project__text">
-      <p>My first assignment at the University Centre at Wakefield College was to build a website for an inanimate object within 500 metres of my home.</p>
-      <p>The website was based on a shipping container and was the first full website that I have built, it was only a fixed width site but provided me with the basic HTML and CSS skills that I would need in the future.</p>
-      <p>The 3 page website is available to view by click this <%= link_to "link", 'http://paulbrighton.com/fed/', class: "c-portfolio-project__link" %>.</p>
+      <p>The code that was used to make The Android Logo is <%= link_to "available on CodePen", 'https://codepen.io/paulbrighton/pen/XxmzJG', class: "c-portfolio-project__link" %>.</p>
     </div>
   </div>
 
@@ -74,7 +63,18 @@
     <div class="c-portfolio-project__text">
     <p>My final assignment at university was to design, market and build a website for a game called Gnomegeddon made by the game design students at the university centre.</p>
     <p>This was an improvement on my first website due to it being responsive and including things like a full screen video header, a dropdown navigation menu and it was designed as a single page website due to the amount of content that was available.</p>
-    <p>The website is still available to view <%= link_to "here", 'http://paulbrighton.com/fed/gnomegeddon/', class: "c-portfolio-project__link" %>.</p>
+    <p>Checkout the <%= link_to "Gnomegeddon website", 'http://paulbrighton.com/fed/gnomegeddon/', class: "c-portfolio-project__link" %> or download and play it for free, courtesy of <%= link_to "Angry Dwarf Studios", 'https://angrydwarfstudios.itch.io/gnomegeddon-war-of-the-gardens', class: "c-portfolio-project__link" %>.</p>
+    </div>
+  </div>
+
+  <h2>Abandoned Container</h2>
+  <div class="c-header-divider"></div>
+  <div class="c-portfolio-project">
+    <%= link_to image_tag("container.jpg",  alt: "A shipping container", class: "c-portfolio-project__img"), "http://paulbrighton.com/fed/" %>
+    <div class="c-portfolio-project__text">
+      <p>My first assignment at the University Centre at Wakefield College was to build a website for an inanimate object within 500 metres of my home.</p>
+      <p>The website was based on a shipping container and was the first full website that I have built, it was only a fixed width site but provided me with the basic HTML and CSS skills that I would need in the future.</p>
+      <p><%= link_to "The Abandonded Container", 'http://paulbrighton.com/fed/', class: "c-portfolio-project__link" %> website is still available to view online.</p>
     </div>
   </div>
 
@@ -95,7 +95,7 @@
     <%= link_to image_tag("chickenskewers.jpeg",  alt: "Chicken skewers with pepper and onion", class: "c-portfolio-project__img"), "https://www.shutterstock.com/g/paulbrighton76" %>
     <div class="c-portfolio-project__text">
       <p>I have been a photographer since 2011 and my interest in travel led me into food photography.</p>
-      <p>I have a portfolio on <%= link_to "Shutterstock", 'https://www.shutterstock.com/g/paulbrighton76', class: "c-portfolio-project__link" %> of over 3400 images, mainly of food from around the world but there is some travel photography in there too. I also have my portfolio available on other stock photography sites such as iStock and Adobe Stock.</p>
+      <p>I have a <%= link_to "portfolio on Shutterstock", 'https://www.shutterstock.com/g/paulbrighton76', class: "c-portfolio-project__link" %> of over 3400 images, mainly of food from around the world but there is some travel photography in there too. I also have my portfolio available on other stock photography sites such as iStock and Adobe Stock.</p>
       <p>Feel free to go have a look by clicking here or the image above, be warned, it may make you hungry.</p>
     </div>
   </div>

@@ -1,5 +1,7 @@
 class Article < ApplicationRecord
   extend FriendlyId
+  include Wisper::Publisher
+  
   friendly_id :title, use: :slugged
 
   has_many :comments, dependent: :delete_all
@@ -17,7 +19,7 @@ class Article < ApplicationRecord
   private
 
   def new_post_email
-    NewArticleEmailJob.perform_async
+    broadcast(:new_article_email)
   end
 end
 
