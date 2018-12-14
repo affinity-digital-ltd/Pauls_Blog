@@ -9,5 +9,10 @@ module Types
     field :comments, [CommentType], null: true
     field :created_at, String, null: false
     field :updated_at, String, null: false
+    field :image, String, null: false
+
+    def image
+      Rails.application.routes.url_helpers.rails_blob_path(object.image, only_path: true)
+    end
   end
 end
