@@ -2,11 +2,11 @@ module Types
   class QueryType < Types::BaseObject
     field :article, ArticleType, null: true do
       description "Finds an article with an id"
-      argument :id, ID, required: true
+      argument :slug, String, required: true
     end
 
-    def article(id:)
-      Article.find(id)
+    def article(slug:)
+      Article.friendly.find(slug)
     end 
 
     field :articles, [Types::ArticleType], null: false do
