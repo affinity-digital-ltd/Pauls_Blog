@@ -4,7 +4,7 @@ RSpec.describe PaulsBlogSchema do
   describe "returning article data" do
     let(:result) {
       res = PaulsBlogSchema.execute(
-        query_string
+        query_string,
       )
 
       if res["errors"]
@@ -18,7 +18,7 @@ RSpec.describe PaulsBlogSchema do
     let(:query_string) { 
       %|
         { 
-          article(id: #{article.id}) { 
+          article(slug: "#{article.slug}") { 
             title 
             createdAt
             comments {
