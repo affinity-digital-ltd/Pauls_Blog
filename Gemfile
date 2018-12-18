@@ -35,7 +35,9 @@ gem 'rouge', '~> 3.3'
 gem 'graphql', '~> 1.8', '>= 1.8.2'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem 'wisper', '~> 2.0'
+
 gem 'rack-cors', '~> 1.0', '>= 1.0.2'
+
 
 
 
