@@ -4,16 +4,14 @@ module Types
       description "Adding a new comment to an article"
       argument :author_name, String, required: true
       argument :body, String, required: true
-      argument :article_id, String, required: true
       argument :image, String, required: true
-      argument :created_at, String, required: true
-      argument :id, ID, required: true
+      argument :slug, String, required: true
     end
 
-    def new_comment(author_name:, body:, image:, article_id:, created_at:, id:)
+    def new_comment(slug:, author_name:, body:, image:)
       
-      article = Article.friendly.find(article_id)
-      article.comments.create(author_name: author_name, body: body, image: image, created_at: created_at, id: id)
+      article = Article.friendly.find(slug)
+      article.comments.create(author_name: author_name, body: body, image: image)
     end
   end
 end

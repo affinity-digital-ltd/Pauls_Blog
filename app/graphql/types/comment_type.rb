@@ -7,5 +7,6 @@ module Types
     field :article_id, ID, null: false
     field :created_at, String, null: false
     field :image, String, null: false
+    field :article, ArticleType, null: false
   end
 end
