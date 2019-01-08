@@ -2,9 +2,14 @@ require 'rails_helper'
 
 RSpec.describe PaulsBlogSchema do
   describe "returning article data" do
+    context = {
+      authorised: true
+    }
+
     let(:result) {
       res = PaulsBlogSchema.execute(
         query_string,
+        context: context
       )
 
       if res["errors"]
