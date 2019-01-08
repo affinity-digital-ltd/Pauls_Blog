@@ -9,9 +9,12 @@ module Types
     end
 
     def new_comment(slug:, author_name:, body:, image:)
-      
-      article = Article.friendly.find(slug)
-      article.comments.create(author_name: author_name, body: body, image: image)
+      if context.fetch(:authorised)
+        article = Article.friendly.find(slug)
+        comment = article.comments.create(author_name: author_name, body: body, image: image)
+      else
+        GraphQL::ExecutionError.new("Please login")
+      end
     end
   end
 end
