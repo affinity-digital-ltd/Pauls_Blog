@@ -34,19 +34,6 @@ RSpec.describe "Articles", type: :feature do
       end
     end
   end
-  
-  describe "viewing an article" do
-    # create article
-    let!(:article) { create(:article) }
-
-    it "should show the contents of the article" do
-      visit article_path(article)
-      
-      expect(page).to have_content(article.title)
-      expect(page).to have_content(article.text)
-      expect(page).to have_content(article.author)
-    end
-  end
 
   describe "editing an article" do
     let!(:article) { create(:article) }

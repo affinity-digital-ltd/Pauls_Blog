@@ -13,7 +13,7 @@ RSpec.describe PaulsBlogSchema do
       res
     }
 
-    let!(:article) { create(:article, :with_comments) }
+    let!(:article) { create(:article) }
 
     let(:query_string) { 
       %|
@@ -30,14 +30,11 @@ RSpec.describe PaulsBlogSchema do
       | 
     }
 
-    it "should return article and comment data" do
+    it "should return article" do
       article_data = result["data"]["article"]
-      comment = result["data"]["article"]["comments"]
 
       expect(article_data["title"]).to eq(article.title)
       expect(article_data["createdAt"]).to eq(article.created_at.utc.to_s)
-      expect(comment.last["body"]).to eq(article.comments.last.body)
-      expect(comment.last["authorName"]).to eq(article.comments.last.author_name)
     end
   end
 

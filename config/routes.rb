@@ -6,8 +6,13 @@ Rails.application.routes.draw do
   
   namespace :admin do
     root 'articles#index'
-    resources :articles, except: [:show]
+    resources :articles
   end
+
+  resources :articles, only: [:index, :show] do
+    resources :comments
+  end
+  resources :messages, only: :create
 
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
