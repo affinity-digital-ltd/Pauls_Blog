@@ -4,14 +4,9 @@ Rails.application.routes.draw do
   end
   post "/graphql", to: "graphql#execute"
   
-  root 'articles#index'
-  get 'about', to: 'static_pages#about'
-  get 'portfolio', to: 'static_pages#portfolio'
-  get 'contact', to: 'static_pages#contact'
-  
   namespace :admin do
     root 'articles#index'
-    resources :articles, except: [:show]
+    resources :articles
   end
 
   resources :articles, only: [:index, :show] do
@@ -21,8 +16,4 @@ Rails.application.routes.draw do
 
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
-
-  get 'auth/oauth2/callback' => 'auth0#callback'
-  get 'auth/failure' => 'auth0#failure'
-  get 'auth/logout' => 'auth0#logout'
 end
