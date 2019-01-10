@@ -37,7 +37,7 @@ gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem 'wisper', '~> 2.0'
 
 gem 'rack-cors', '~> 1.0', '>= 1.0.2'
-
+gem 'rack-throttle', '~> 0.7.0'
 
 
 
