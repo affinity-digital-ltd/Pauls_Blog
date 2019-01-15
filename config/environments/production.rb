@@ -105,5 +105,5 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  use Rack::Throttle::Second,   :max => 5, :cache => Redis.new, :key_prefix => :throttle
+  config.middleware.use Rack::Throttle::Second,   :max => 5, :cache => Redis.new, :key_prefix => :throttle
 end

@@ -20,7 +20,7 @@ module PaulsBlog
     # the framework and any gems in your application.
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'localhost:3000', /\Ahttp:\/\/pauls-blog.herokuapp.comz/
+        origins 'localhost:3000', 'pauls-react-blog.herokuapp.com', 'www.paulbrighton.com'
         resource '*', :headers => :any, :methods => [:get, :post, :options]
       end
     end
